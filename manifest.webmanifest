@@ -1,5 +1,5 @@
 {
-  "id": "rapor-olusturucu",
+  "id": "rapor-olusturucu-v2",
   "name": "Rapor Oluşturucu",
   "short_name": "Rapor",
   "description": "İnceleme raporunu Raporlama Rehberi biçiminde Word olarak hazırlar; hataları gösterir. Tamamen cihazda çalışır.",
