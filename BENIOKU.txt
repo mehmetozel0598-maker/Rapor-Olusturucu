@@ -1,0 +1,10 @@
+RAPOR OLUŞTURUCU – TABLET UYGULAMASI (Sürüm 1.0)
+
+1) GitHub'da yeni bir depo açın (ör. Rapor-Olusturucu), Public seçin.
+2) Bu klasördeki 8 dosyanın hepsini depoya yükleyin (Add file > Upload files).
+3) Settings > Pages > Branch: main, klasör: / (root) > Save.
+4) 1-2 dakika sonra tablette https://KULLANICIADI.github.io/Rapor-Olusturucu/ adresini açın,
+   Paylaş/menü > Ana ekrana ekle.
+
+İlk açılıştan sonra internetsiz çalışır. Yazdığınız rapor hiçbir sunucuya gönderilmez;
+yalnızca "Taslağı kaydet" ile indirdiğiniz dosyada veya ayarlarda açarsanız cihazın kendi hafızasında durur.

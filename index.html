@@ -1,0 +1,892 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Rapor Oluşturucu</title>
+<link rel="icon" href="data:image/png;base64,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">
+<style>
+:root{
+  --bg:#eef1f4;--panel:#ffffff;--paper:#fbfcfd;--ink:#16202b;--muted:#5d6b78;--line:#d9e0e7;
+  --accent:#1f4e79;--accent-ink:#ffffff;--accent-soft:#e3ecf5;
+  --err:#b42318;--err-bg:#fdecea;--warn:#a15c00;--warn-bg:#fff4e0;--info:#2e5d8a;--info-bg:#e8f0f8;--ok:#1d7a52;
+  --serif:"Times New Roman",Times,Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#12171d;--panel:#1a2129;--paper:#1f2730;--ink:#e6ebf0;--muted:#9aa8b5;--line:#2c3742;
+  --accent:#7fb0e0;--accent-ink:#0d1620;--accent-soft:#223244;
+  --err:#ff8a80;--err-bg:#3a1d1b;--warn:#f0b35c;--warn-bg:#3a2a12;--info:#8fbbe6;--info-bg:#1c2b3b;--ok:#5fd19b;}}
+*{box-sizing:border-box}[hidden]{display:none!important}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-text-size-adjust:100%}
+button,input,select,textarea{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:10px;padding:10px 16px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap;position:sticky;top:0;z-index:20}
+.brand{font-weight:750;font-size:16px;display:flex;align-items:center;gap:9px;margin-right:auto}
+.logo{width:26px;height:26px;border-radius:6px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font:800 12px/1 var(--serif)}
+.ver{font-weight:500;font-size:12px;color:var(--muted)}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:9px;padding:9px 13px;cursor:pointer;white-space:nowrap;min-height:40px}
+.btn:hover{border-color:var(--accent)}.btn:disabled{opacity:.45}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink);font-weight:650}
+.btn.small{padding:5px 10px;min-height:32px;font-size:13px}
+.btn.ghost{background:transparent}
+.btn.danger{color:var(--err)}
+.layout{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:calc(100% - 62px)}
+nav.tabs{background:var(--panel);border-right:1px solid var(--line);padding:12px 8px;display:flex;flex-direction:column;gap:4px}
+nav.tabs button{display:flex;align-items:center;gap:8px;text-align:left;border:0;background:none;padding:11px 12px;border-radius:9px;cursor:pointer;color:var(--muted);font-weight:600}
+nav.tabs button.on{background:var(--accent-soft);color:var(--ink)}
+nav.tabs .n{margin-left:auto;font-size:12px;border-radius:999px;padding:1px 8px;font-weight:700}
+.n.err{background:var(--err-bg);color:var(--err)}.n.warn{background:var(--warn-bg);color:var(--warn)}
+main{padding:18px;min-width:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.card h2{margin:0 0 12px;font-size:13px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.f{display:flex;flex-direction:column;gap:4px;min-width:0}
+.f>span{font-size:12.5px;color:var(--muted);font-weight:600}
+.f.full{grid-column:1/-1}
+input[type=text],input[type=date],input[type=number],select,textarea{border:1px solid var(--line);border-radius:8px;padding:9px 10px;background:var(--paper);width:100%;min-width:0}
+textarea{resize:vertical;min-height:96px;font:16px/1.55 var(--serif)}
+.issue{outline:2px solid var(--warn);outline-offset:1px}
+.issue.err{outline-color:var(--err)}
+.imsg{font-size:12.5px;line-height:1.4;padding:6px 9px;border-radius:7px;margin-top:4px}
+.imsg.err{background:var(--err-bg);color:var(--err)}.imsg.warn{background:var(--warn-bg);color:var(--warn)}.imsg.info{background:var(--info-bg);color:var(--info)}
+.imsg .btn{margin-left:6px}
+.row{display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap}
+.row .f{flex:1;min-width:150px}
+.list>.item{border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:8px;background:var(--paper)}
+.muted{color:var(--muted);font-size:13px}
+/* bölümler */
+.sec-layout{display:grid;grid-template-columns:minmax(220px,300px) minmax(0,1fr);gap:14px;align-items:start}
+.tree{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;position:sticky;top:76px;max-height:calc(100vh - 96px);overflow:auto}
+.tree button{display:flex;gap:6px;width:100%;text-align:left;border:0;background:none;padding:8px 9px;border-radius:8px;cursor:pointer;align-items:baseline}
+.tree button.on{background:var(--accent-soft)}
+.tree .num{font-weight:700;color:var(--accent);min-width:2.6em;font-variant-numeric:tabular-nums}
+.tree .dot{margin-left:auto;width:8px;height:8px;border-radius:50%;flex:none;align-self:center}
+.dot.err{background:var(--err)}.dot.warn{background:var(--warn)}
+.blk{border:1px solid var(--line);border-radius:10px;padding:10px;margin-bottom:10px;background:var(--paper)}
+.blk-h{display:flex;align-items:center;gap:6px;margin-bottom:6px;flex-wrap:wrap}
+.blk-h .tag{font-size:12px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.4px;margin-right:auto}
+.hint{background:var(--accent-soft);border-radius:9px;padding:9px 11px;font-size:13.5px;margin-bottom:12px}
+.addbar{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.tbl-ed{overflow:auto;max-width:100%}
+.tbl-ed table{border-collapse:collapse}
+.tbl-ed td{border:1px solid var(--line);padding:0;min-width:110px}
+.tbl-ed td input{border:0;border-radius:0;padding:7px 8px;background:transparent;width:100%}
+.tbl-ed tr:first-child td input.h{font-weight:700}
+/* kontrol */
+.chk{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:10px;margin-bottom:8px}
+.chk.err{background:var(--err-bg)}.chk.warn{background:var(--warn-bg)}.chk.info{background:var(--info-bg)}
+.chk .ic{font-weight:800;width:18px;text-align:center}
+.chk.err .ic{color:var(--err)}.chk.warn .ic{color:var(--warn)}.chk.info .ic{color:var(--info)}
+.chk .src{font-size:12px;color:var(--muted)}
+.chk .acts{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.summary{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.pill{border-radius:999px;padding:4px 12px;font-weight:700;font-size:13px}
+.pill.err{background:var(--err-bg);color:var(--err)}.pill.warn{background:var(--warn-bg);color:var(--warn)}.pill.info{background:var(--info-bg);color:var(--info)}.pill.ok{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+/* önizleme */
+.pv{background:#7b8794;padding:16px;border-radius:12px;overflow:auto}
+.pg{background:#fff;color:#000;max-width:794px;margin:0 auto 16px;padding:60px 64px;font:12pt/1.4 var(--serif);position:relative;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.pg p{margin:0 0 8px;text-align:justify;text-indent:1.25cm}
+.pg h2,.pg h3,.pg h4{font-size:12pt;margin:14px 0 8px;text-indent:1.25cm}
+.pg ul{margin:0 0 8px 1.9cm;padding:0}
+.pg .c{text-align:center;text-indent:0}.pg .b{font-weight:700}.pg .big{font-size:16pt;margin:60px 0 6px}.pg .cap{font-size:11pt;margin-top:10px}
+.pg .gz{text-align:center;font-weight:700;font-size:11pt;margin:-36px 0 24px}.pg .gz:last-child{margin:24px 0 -36px}
+.pg table.rt{border-collapse:collapse;margin:6px auto 10px;font-size:10.5pt}
+.pg table.rt th,.pg table.rt td{border:1px solid #000;padding:2px 6px;text-align:left;text-indent:0}
+.pg table.rt th{background:#f2f2f2;text-align:center}.pg table.rt td.num{text-align:right}
+.pg table.kv{width:100%}.pg table.kv th{text-align:left;width:38%;background:none}
+.pg .sig{display:flex;justify-content:space-around;text-align:center;margin-top:30px}.pg .sig.one{justify-content:flex-end}.pg .sig div{min-width:180px}
+.pg .pno{text-align:center;color:#666;font:11px system-ui;margin-top:24px}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:9px;opacity:0;transition:opacity .2s;z-index:50;pointer-events:none;max-width:90vw}
+#toast.show{opacity:.96}
+.flash{animation:fl 1.6s ease}
+@keyframes fl{0%,40%{box-shadow:0 0 0 4px var(--warn)}100%{box-shadow:none}}
+dialog{border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--ink);max-width:560px;width:calc(100% - 32px);padding:18px}
+dialog::backdrop{background:rgba(0,0,0,.35)}
+.types{display:grid;gap:6px;max-height:60vh;overflow:auto}
+.types button{text-align:left;border:1px solid var(--line);background:var(--paper);border-radius:9px;padding:10px 12px;cursor:pointer}
+.types button:hover{border-color:var(--accent)}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  nav.tabs{flex-direction:row;overflow-x:auto;border-right:0;border-bottom:1px solid var(--line);padding:6px;position:sticky;top:62px;z-index:15}
+  nav.tabs button{padding:9px 11px;flex:none}
+  .sec-layout{grid-template-columns:1fr}.tree{position:static;max-height:none}
+  main{padding:12px}.pg{padding:28px 22px}
+}
+@media (prefers-reduced-motion:reduce){.flash{animation:none}}
+</style>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#1f4e79">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Rapor Oluşturucu">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">R</span>Rapor Oluşturucu <span class="ver">Sürüm 1.0 · 08.11.2026</span></div>
+  <button class="btn" id="bNew">Yeni rapor</button>
+  <button class="btn" id="bOpen">Taslak aç</button>
+  <button class="btn" id="bSave">Taslağı kaydet</button>
+  <button class="btn primary" id="bWord">Word indir</button>
+  <input type="file" id="fOpen" accept=".json,application/json" hidden>
+</header>
+<div class="layout">
+  <nav class="tabs" id="tabs">
+    <button data-tab="bilgi" class="on">Rapor bilgileri <span class="n" id="n-bilgi"></span></button>
+    <button data-tab="veri">İnceleme verileri</button>
+    <button data-tab="bolum">Bölümler <span class="n" id="n-bolum"></span></button>
+    <button data-tab="ekler">Ekler <span class="n" id="n-ekler"></span></button>
+    <button data-tab="kontrol">Kontrol <span class="n" id="n-kontrol"></span></button>
+    <button data-tab="onizleme">Önizleme</button>
+  </nav>
+  <main id="main"></main>
+</div>
+<dialog id="dlgType"><h3 style="margin-top:0">Rapor türü</h3><p class="muted">Bölümler seçtiğiniz türün yapısına göre hazırlanır; sonradan bölüm ekleyip çıkarabilirsiniz.</p><div class="types" id="typeList"></div><div style="text-align:right;margin-top:12px"><button class="btn" id="dlgCancel">Vazgeç</button></div></dialog>
+<div id="toast"></div>
+<script>'use strict';
+/* =====================================================================
+   Rapor Oluşturucu – çekirdek (model, şablonlar, Word çıktısı, kontrol)
+   Not: Bu dosyada hiçbir rapor verisi bulunmaz; veriler yalnızca cihazda işlenir.
+   ===================================================================== */
+const trU=s=>String(s||'').toLocaleUpperCase('tr');
+const trL=s=>String(s||'').toLocaleLowerCase('tr');
+const uid=()=>Math.random().toString(36).slice(2,9);
+const xesc=s=>String(s==null?'':s).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F￾￿]/g,'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const hesc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* ---------------- Rapor türleri ve bölüm şablonları ---------------- */
+// [başlık, alt bölümler, varsayılan metin, ipucu anahtarı]
+const S_=(title,children,text,hint)=>({title,children:children||[],text:text||'',hint:hint||''});
+const GIRIS=S_('Giriş',[],'', 'giris');
+const SONUC=S_('Sonuç',[],'', 'sonuc');
+const TYPES={
+  vir:{label:'Vergi İnceleme Raporu (VİR) – Tarhiyat',cover:'VERGİ İNCELEME RAPORU',sub:'',
+    sec:[GIRIS,S_('Usul İncelemeleri',[],'Usul yönünden eleştirilecek bir husus tespit edilmemiştir.','usul'),S_('Hesap İncelemeleri',[],'','hesap'),
+      S_('Eleştirilen Hususlar',[S_('Resen Takdir Nedeni',[],'','takdirNedeni'),S_('Resen Takdir Verileri',[S_('Tespit',[],'','tespit'),S_('Konuya İlişkin Mevzuat',[],'','mevzuat'),S_('Değerlendirme',[],'','degerlendirme')],'','takdirVerileri'),S_('Yapılacak İşlemler',[],'','yapilacak')],'','elestiri'),SONUC]},
+  virKabul:{label:'Vergi İnceleme Raporu (Kabul)',cover:'VERGİ İNCELEME RAPORU',sub:'(KABUL)',
+    sec:[GIRIS,S_('Usul İncelemeleri',[],'Usul yönünden eleştirilecek bir husus tespit edilmemiştir.','usul'),S_('Hesap İncelemeleri',[],'','hesap'),S_('Yapılan İnceleme ve Tespitler',[],'','tespitler'),S_('Değerlendirme',[],'','degerlendirme'),SONUC]},
+  virIade:{label:'Vergi İnceleme Raporu (İade)',cover:'VERGİ İNCELEME RAPORU',sub:'(İADE)',
+    sec:[GIRIS,S_('Usul İncelemeleri',[],'Usul yönünden eleştirilecek bir husus tespit edilmemiştir.','usul'),S_('Hesap İncelemeleri',[],'','hesap'),S_('Yapılan İnceleme ve Tespitler',[],'','iadeTespit'),S_('Değerlendirme',[],'','iadeDeger'),S_('Yapılacak İşlemler',[],'','yapilacak'),SONUC]},
+  vtr:{label:'Vergi Tekniği Raporu (Genel)',cover:'VERGİ TEKNİĞİ RAPORU',sub:'',
+    sec:[GIRIS,S_('Yapılan İnceleme ve Tespitler',[],'','tespitler'),S_('İlgili Mevzuat',[],'','mevzuat'),S_('Değerlendirme',[],'','degerlendirme'),SONUC]},
+  vtrTam:{label:'Vergi Tekniği Raporu (Tamamen Sahte Belge Düzenleme)',cover:'VERGİ TEKNİĞİ RAPORU',sub:'(Tamamen Sahte Belge Düzenleme)',sahte:1},
+  vtrKismen:{label:'Vergi Tekniği Raporu (Kısmen Sahte Belge Düzenleme)',cover:'VERGİ TEKNİĞİ RAPORU',sub:'(Kısmen Sahte Belge Düzenleme)',sahte:1},
+  vtrTaklit:{label:'Vergi Tekniği Raporu (Taklit, Zayi, Çalıntı Vb. Belge)',cover:'VERGİ TEKNİĞİ RAPORU',sub:'(Taklit, Zayi, Çalıntı Vb. Belgelerden Kaynaklı Sahte Belge Düzenleme)',sahte:1},
+  vtrMuht:{label:'Vergi Tekniği Raporu (Muhteviyatı İtibarıyla Yanıltıcı Belge)',cover:'VERGİ TEKNİĞİ RAPORU',sub:'(Muhteviyatı İtibarıyla Yanıltıcı Belge Düzenleme)',sahte:1},
+  vsr:{label:'Vergi Suçu Raporu (VSR)',cover:'VERGİ SUÇU RAPORU',sub:'',
+    sec:[GIRIS,S_('Suçun Unsurları',[S_('Suçun Kanuni Unsuru',[],'','kanuni'),S_('Suçun Maddi Unsuru',[],'','maddi'),S_('Suçun Manevi Unsuru',[],'','manevi')],'','unsurlar'),S_('Suçu İşleyenler',[],'','isleyenler'),S_('Sonuç',[],'','sonucVsr')]},
+  gorYmm:{label:'Görüş ve Öneri Raporu (YMM/SMMM Sorumluluk)',cover:'GÖRÜŞ VE ÖNERİ RAPORU',sub:'(Sorumluluk Raporu)',gor:1},
+  gorIhbar:{label:'Görüş ve Öneri Raporu (İhbar İkramiyesi)',cover:'GÖRÜŞ VE ÖNERİ RAPORU',sub:'(İhbar İkramiyesi Raporu)',gor:1},
+  gorSuc:{label:'Görüş ve Öneri Raporu (Suç Duyurusu)',cover:'GÖRÜŞ VE ÖNERİ RAPORU',sub:'(Suç Duyurusu Raporu)',sucYapisi:1},
+  gorBilirkisi:{label:'Görüş ve Öneri Raporu (Bilirkişi)',cover:'GÖRÜŞ VE ÖNERİ RAPORU',sub:'(Bilirkişi Raporu)',gor:1},
+  gorInceleme:{label:'Görüş ve Öneri Raporu (İnceleme Önerisi)',cover:'GÖRÜŞ VE ÖNERİ RAPORU',sub:'(İnceleme Önerisi Raporu)',gor:1},
+  gorMevzuat:{label:'Görüş ve Öneri Raporu (Mevzuat Önerisi)',cover:'GÖRÜŞ VE ÖNERİ RAPORU',sub:'(Mevzuat Önerisi Raporu)',gor:1},
+};
+for(const k in TYPES){
+  const T=TYPES[k];
+  if(T.sahte)T.sec=[GIRIS,S_('Yapılan İnceleme ve Tespitler',[],'','tespitler'),S_('İlgili Mevzuat',[],'','mevzuat'),S_('Değerlendirme',[S_('Yapılacak İşlemler',[],'','yapilacak')],'','degerlendirme'),SONUC];
+  if(T.gor)T.sec=[GIRIS,S_('Yapılan Araştırma ve Tespitler',[],'','tespitler'),S_('Değerlendirme',[],'','degerlendirme'),SONUC];
+  if(T.sucYapisi)T.sec=TYPES.vsr.sec;
+}
+const VIR_LIKE=new Set(['vir','virKabul','virIade']);
+// Kısa hatırlatmalar (kendi ifadelerimle; rehber metni değildir)
+const HINTS={
+  giris:'Mükellefin kimlik ve iletişim bilgileri, bağlı olduğu vergi dairesi, faaliyet konusu ve faaliyet durumu; görevlendirme yazısı; inceleme konusu, türü, dönemi ve kapsamı. Kurumlar vergisi mükelleflerinde başlıca ortaklar. "Giriş taslağı oluştur" kapak bilgilerinden bunları yazar.',
+  usul:'Ceza gerektiren bir fiil yoksa standart cümle kalır. Varsa "Usulsüzlük" / "Özel Usulsüzlük" alt başlıkları açın; gerekmeyen alt başlığı eklemeyin.',
+  hesap:'Gelir tablosu, bilanço veya işletme hesabı özeti; ilgili dönem beyanları ve varsa düzeltmeler, önceki incelemeler, alınan iadeler.',
+  elestiri:'Alt başlıklar: takdir nedeni, takdir verileri (tespitler, mevzuat, değerlendirme) ve yapılacak işlemler. İkmalen tarhiyatta başlığı buna göre değiştirin.',
+  takdirNedeni:'Tespitlere atıfla eleştirinin kısa özeti ve takdirin yasal dayanağı.',
+  takdirVerileri:'Tespitleri delilleri ve tutanak atıflarıyla açıklayın; mükellefin beyan ve ifadelerine yer verin.',
+  tespit:'Her tespiti ayrı alt başlıkta açabilirsiniz. Tutanak atfı: (Ek: 1 Tutanak Md. 12).',
+  mevzuat:'Yalnızca konuyla doğrudan ilgili hükümleri seçerek verin; mevzuatın tamamını aktarmayın.',
+  degerlendirme:'Tespitleri mevzuat ve varsa yargı kararları çerçevesinde değerlendirip ulaşılan sonucu tereddüde yer vermeyecek açıklıkta yazın.',
+  yapilacak:'Dönem bazında matrah/matrah farkı, vergi farkı ve cezaların hesaplanması; tablolar halinde.',
+  tespitler:'İnceleme konusunun gerektirdiği araştırma ve tespitler; tutanaklara atıfla.',
+  iadeTespit:'İade talebi, dayanağı, iadenin yapılıp yapılmadığı; iade tutarı ve dayanak işlemlerin doğruluğuna ilişkin tespitler.',
+  iadeDeger:'İade hakkı doğuran işlemin şartlarının sağlanıp sağlanmadığı ve hak edilen tutar.',
+  sonuc:'Mükellef ve inceleme bilgileri kısaca; dönemler itibarıyla matrah farkı, vergi, cezalar ve yasal dayanakları; uzlaşma talebi; Rapor Değerlendirme Komisyonunda dinlenme talebi. "Sonuç taslağı oluştur" inceleme verilerinden bunları yazar.',
+  unsurlar:'Suçun kanuni, maddi ve manevi unsurlarını ayrı alt başlıklarda açıklayın.',
+  kanuni:'Fiilin kanundaki suç tanımına uygunluğu.',maddi:'Fiilin varlığı.',manevi:'Fiilin bilerek ve isteyerek işlendiği.',
+  isleyenler:'Fiil ile fail arasındaki bağ ve gerekçeleri; failin kimlik bilgileri.',
+  sonucVsr:'Suç, işlendiği zaman, failler ve raporun gönderileceği Cumhuriyet Başsavcılığı.',
+};
+const UNVANLAR=['Vergi Başmüfettişi','Vergi Müfettişi','Vergi Müfettiş Yardımcısı'];
+const VERGI_TURLERI=['Gelir Vergisi','Kurumlar Vergisi','Katma Değer Vergisi','Özel Tüketim Vergisi','Gelir (Stopaj) Vergisi','Kurumlar (Stopaj) Vergisi','Geçici Vergi','Damga Vergisi','Banka ve Sigorta Muameleleri Vergisi','Diğer'];
+const VERI_SATIRLARI=[
+  ['beyan','Beyan edilen matrah'],['matrahFarki','Bulunan matrah farkı'],['vergiFarki','Bulunan vergi farkı'],['tarhi','Tarhı istenen vergi'],
+  ['vzc1','Vergi ziyaı cezası (1 kat)'],['vzc3','Vergi ziyaı cezası (3 kat)'],['usulsuz','Usulsüzlük cezası'],['ozelUsulsuz','Özel usulsüzlük cezası'],
+  ['iadeTalep','İadesi talep edilen tutar'],['iadeRed','Reddedilen iade tutarı'],['iadeEdilecek','İade edilmesi gereken tutar'],
+];
+
+function mkSection(tpl){return{id:uid(),title:tpl.title,hint:tpl.hint,blocks:tpl.text?[{id:uid(),type:'p',text:tpl.text}]:[],children:(tpl.children||[]).map(mkSection)};}
+function newReport(type){
+  const T=TYPES[type]||TYPES.vir;
+  return{
+    v:1,type,
+    meta:{gizlilik:'HİZMETE ÖZEL',daire:'',tarih:'',sayi:'',vergiTuru:type.startsWith('vir')?'Kurumlar Vergisi':'',konu:'',donem:'',kapsam:'Tam',
+      mufettisler:[{ad:'',unvan:'Vergi Müfettişi'}],gorevler:[{birim:'',tarih:'',sayi:'',konu:''}],
+      mukellef:{ad:'',vkn:'',vd:'',adres:'',is:'',meslekKodu:'',tel:'',faaliyet:'Faal'},ortaklar:[],
+      uzlasma:'Yok',rdk:'Yok',ozelge:'Yok',baslama:'',ekSure:'0',ibrazGun:''},
+    veriler:[],
+    sections:T.sec.map(mkSection),
+    ekler:[],cd:'',
+    ayar:{font:'tnr',satir:'1.15',kapak:true,ekDizini:true,italikTirnak:true,sayiBicim:true},
+  };
+}
+
+/* ---------------- yardımcılar ---------------- */
+const isKurum=R=>/kurumlar/i.test(R.meta.vergiTuru||'');
+const mukellefTerim=R=>isKurum(R)?'Mükellef Kurum':'Mükellef';
+const lowerFirst=s=>{s=String(s||'');return /^[A-ZÇĞİÖŞÜ]{2}/.test(s)?s:trL(s.slice(0,1))+s.slice(1);};
+const mukellefIn=R=>isKurum(R)?'Mükellef Kurumun':'Mükellefin';
+function donemTerimi(R){const v=R.meta.vergiTuru||'';if(/^Gelir Vergisi$/.test(v))return 'takvim yılı';if(/^Kurumlar Vergisi$/.test(v))return 'hesap dönemi';return 'vergilendirme dönemi';}
+const fmtDate=d=>{if(!d)return '';const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d);return m?`${m[3]}/${m[2]}/${m[1]}`:d;};
+const parseNum=s=>{if(s==null)return NaN;s=String(s).trim();if(!s)return NaN;if(/^-?[\d.]+,\d+$/.test(s)||/^-?\d{1,3}(\.\d{3})+$/.test(s))s=s.replace(/\./g,'').replace(',','.');else s=s.replace(',','.');return Number(s);};
+const fmtTL=n=>isNaN(n)?'':n.toLocaleString('tr-TR',{minimumFractionDigits:2,maximumFractionDigits:2});
+function fmtCell(s,on){
+  s=String(s==null?'':s).trim();if(!on)return s;
+  if(/^\d{10,11}$/.test(s)||/^0\d/.test(s))return s; // VKN/TCKN, telefon
+  if(/^-?\d{5,9}([.,]\d{1,2})?$/.test(s)||/^-?\d+[.,]\d{1,2}$/.test(s)&&!/^\d{1,2}[.]\d{1,2}$/.test(s)){const n=parseNum(s);if(!isNaN(n))return fmtTL(n);}
+  return s;
+}
+const isNumericCell=s=>/^[-+(]?\s*[\d.,]+\s*(TL|₺|%)?\)?$/.test(String(s).trim())&&/\d/.test(s)&&!/^\d{1,2}[./]\d{1,2}[./]\d{2,4}$/.test(String(s).trim());
+function walk(sections,fn,prefix=[],depth=1){sections.forEach((s,i)=>{const num=[...prefix,i+1];fn(s,num,depth);walk(s.children,fn,num,depth+1);});}
+const numStr=num=>num.join('.')+'.';
+// Başlık biçimi: 1. düzey TAMAMI BÜYÜK, 2. düzey Her Kelimenin İlk Harfi Büyük, 3+ yalnız ilk kelime büyük harfle
+const SMALLW=new Set(['ve','ile','veya','ya','da','de','ki','ya da']);
+function headingCase(t,depth){
+  t=String(t||'').trim();
+  if(depth===1)return trU(t);
+  if(depth===2)return t.split(/(\s+)/).map((w,i)=>{if(/^\s+$/.test(w)||!w)return w;if(i>0&&SMALLW.has(trL(w)))return trL(w);if(/^[A-ZÇĞİÖŞÜ0-9.\/()-]{2,}$/.test(w))return w;return trU(w[0])+w.slice(1);}).join('');
+  return t?trU(t[0])+t.slice(1):t;
+}
+// Satır içi biçim: **kalın**, *italik*; tırnak içi ifadeler otomatik italik
+function parseInline(str,autoItalic){
+  const out=[];const re=/\*\*([^*]+)\*\*|\*([^*]+)\*/g;let last=0,m;
+  const pushPlain=s=>{if(!s)return;if(!autoItalic){out.push({t:s});return;}
+    const q=/(“[^”]*”|"[^"\n]*")/g;let l=0,mm;while((mm=q.exec(s))){if(mm.index>l)out.push({t:s.slice(l,mm.index)});out.push({t:mm[0].replace(/^"/,'“').replace(/"$/,'”'),i:true});l=mm.index+mm[0].length;}
+    if(l<s.length)out.push({t:s.slice(l)});};
+  while((m=re.exec(str))){pushPlain(str.slice(last,m.index));if(m[1]!=null)out.push({t:m[1],b:true});else out.push({t:m[2],i:true});last=m.index+m[0].length;}
+  pushPlain(str.slice(last));
+  return out;
+}
+const linesOf=t=>String(t||'').split(/\n/).map(s=>s.trim()).filter(Boolean);
+
+/* ---------------- Giriş ve Sonuç taslakları ---------------- */
+function girisTaslak(R){
+  const M=R.meta,K=M.mukellef,mt=mukellefTerim(R),blocks=[];
+  const gv=M.gorevler.filter(g=>g.tarih||g.sayi||g.birim);
+  const donem=M.donem||'[dönem]',term=donemTerimi(R),vt=M.vergiTuru?trL(M.vergiTuru)+' ':'';
+  if(gv.length<=1){
+    const g=gv[0]||{};
+    blocks.push({id:uid(),type:'p',text:`${g.birim||M.daire||'[birim]'} Daire Başkanlığının ${fmtDate(g.tarih)||'[tarih]'} tarih ve ${g.sayi||'[sayı]'} sayılı görevlendirme yazısı ile ${K.ad||'[mükellef]'} hakkında ${donem} ${term} için ${vt}yönünden ${trL(M.kapsam||'tam')} inceleme yapılması istenilmiştir.`});
+  }else{
+    blocks.push({id:uid(),type:'p',text:`${K.ad||'[mükellef]'} hakkında aşağıdaki tabloda yer alan görevlendirme yazıları ile ${donem} ${term} için ${vt}yönünden ${trL(M.kapsam||'tam')} inceleme yapılması istenilmiştir.`});
+    blocks.push({id:uid(),type:'table',head:true,rows:[['Görevlendiren Birim','Yazı Tarihi','Yazı Sayısı','İnceleme Konusu'],...gv.map(g=>[(g.birim||M.daire||'')+' Daire Başkanlığı',fmtDate(g.tarih),g.sayi,g.konu||M.konu||''])]});
+  }
+  if(M.konu)blocks.push({id:uid(),type:'p',text:`İncelemenin konusu ${lowerFirst(M.konu).replace(/\.$/,'')} olup inceleme ${trL(M.kapsam||'tam')} inceleme olarak yürütülmüştür.`});
+  blocks.push({id:uid(),type:'p',text:`${mt}, ${K.vkn||'[vergi kimlik no]'} vergi kimlik numarası ile ${K.vd||'[vergi dairesi]'} Vergi Dairesi Müdürlüğünün mükellefi olup ${K.adres?K.adres+' adresinde ':''}${K.is?trL(K.is[0])+K.is.slice(1)+' faaliyetinde bulunmaktadır.':'faaliyette bulunmaktadır.'}${K.faaliyet&&K.faaliyet!=='Faal'?` ${mt} halen ${trL(K.faaliyet)} durumdadır.`:` ${mt} faaliyetine devam etmektedir.`}`});
+  if(isKurum(R)&&M.ortaklar.some(o=>o.ad)){
+    blocks.push({id:uid(),type:'p',text:`${mukellefIn(R)} inceleme dönemi itibarıyla ortakları ve hisse oranları aşağıdaki tabloda gösterilmiştir.`});
+    blocks.push({id:uid(),type:'table',head:true,rows:[['Ortağın Adı Soyadı / Unvanı','Vergi / T.C. Kimlik No','Hisse Oranı (%)'],...M.ortaklar.filter(o=>o.ad).slice(0,5).map(o=>[o.ad,o.vkn,o.oran])]});
+  }
+  return blocks;
+}
+function sonucTaslak(R){
+  const M=R.meta,K=M.mukellef,mt=mukellefTerim(R),blocks=[],term=donemTerimi(R),vt=M.vergiTuru?trL(M.vergiTuru):'[vergi türü]';
+  blocks.push({id:uid(),type:'p',text:`${K.ad||'[mükellef]'} (${K.vkn||'[VKN]'}) hakkında ${M.donem||'[dönem]'} ${term} için ${vt} yönünden yapılan ${trL(M.kapsam||'tam')} vergi incelemesi sonucunda, raporun ilgili bölümlerinde açıklandığı üzere;`});
+  const items=[];
+  for(const d of R.veriler){
+    const v=k=>{const n=parseNum(d[k]);return isNaN(n)||n===0?null:fmtTL(n)+' TL';};
+    const parts=[];
+    if(v('matrahFarki'))parts.push(`${v('matrahFarki')} matrah farkı`);
+    if(v('tarhi'))parts.push(`${v('tarhi')} ${vt} tarhı`);
+    else if(v('vergiFarki'))parts.push(`${v('vergiFarki')} vergi farkı`);
+    if(v('vzc1'))parts.push(`${v('vzc1')} vergi ziyaı cezası (1 kat) [yasal dayanak]`);
+    if(v('vzc3'))parts.push(`${v('vzc3')} vergi ziyaı cezası (3 kat) [yasal dayanak]`);
+    if(v('usulsuz'))parts.push(`${v('usulsuz')} usulsüzlük cezası [yasal dayanak]`);
+    if(v('ozelUsulsuz'))parts.push(`${v('ozelUsulsuz')} özel usulsüzlük cezası [yasal dayanak]`);
+    if(v('iadeEdilecek'))parts.push(`${v('iadeEdilecek')} iade`);
+    if(v('iadeRed'))parts.push(`${v('iadeRed')} iade talebinin reddi`);
+    if(parts.length)items.push(`${d.donem||'[dönem]'} döneminde ${parts.join(', ')}`);
+  }
+  if(items.length)blocks.push({id:uid(),type:'list',text:items.map((s,i)=>s+(i<items.length-1?' gerektiği,':' gerektiği sonuç ve kanaatine varılmıştır.')).join('\n')});
+  else if(VIR_LIKE.has(R.type))blocks.push({id:uid(),type:'p',text:'[İnceleme verileri girilmemiş: dönemler itibarıyla matrah farkı, vergi ve cezaları yazınız.]'});
+  if(VIR_LIKE.has(R.type)){
+    const mi=mukellefIn(R);const uz={Var:`${mi} tarhiyat öncesi uzlaşma talebi bulunmaktadır.`,Yok:`${mi} tarhiyat öncesi uzlaşma talebi bulunmamaktadır.`,'Kapsam dışı':'İnceleme sonucu tarhiyat öncesi uzlaşma kapsamı dışındadır.'}[M.uzlasma]||'';
+    if(uz)blocks.push({id:uid(),type:'p',text:uz});
+    blocks.push({id:uid(),type:'p',text:M.rdk==='Var'?`${mi} Rapor Değerlendirme Komisyonunda dinlenme talebi bulunmaktadır.`:`${mi} Rapor Değerlendirme Komisyonunda dinlenme talebi bulunmamaktadır.`});
+  }
+  return blocks;
+}
+
+/* ---------------- Kontrol: Rehber şekil/yazım kuralları, Yönetmelik hükümleri, tutarlılık, yazım ---------------- */
+// Her bulgu: {lvl:'err'|'warn'|'info', msg, src, where:{tab, path?, sec?, block?}, fix?:{block,from,to}}
+const ABBR=['VUK','GVK','KVK','KDVK','ÖTVK','DVK','AATUHK','TTK','TCK','KDV','ÖTV','BSMV','VTR','VİR','VSR','GÖR','RDK','YMM','SMMM','GİB','VDK','MBR','SGK','HMB'];
+// Sık yapılan yazım yanlışları (TDK İmla Kılavuzu) – [desen, doğrusu]
+const TRL_='A-Za-zÇĞİÖŞÜçğıöşüÂÎÛâîû';
+const SW=(src,pre)=>new RegExp(`(?<![${TRL_}])(?:${src})${pre?'':`(?![${TRL_}])`}`,'gi');
+const SPELL=[
+  [SW('itibari ?(?:ile|yle)|itibariyle'),'itibarıyla'],[SW('tesbit',1),'tespit'],[SW('bir çok'),'birçok'],[SW('hiç bir'),'hiçbir'],
+  [SW('herşey',1),'her şey'],[SW('birşey',1),'bir şey'],[SW('yada'),'ya da'],[SW('herhangibir'),'herhangi bir'],[SW('pekçok'),'pek çok'],[SW('bir takım'),'birtakım'],
+  [SW('hergün'),'her gün'],[SW('heryıl'),'her yıl'],[SW('birkez'),'bir kez'],[SW('malesef'),'maalesef'],[SW('yanlız'),'yalnız'],[SW('yalnış',1),'yanlış'],
+  [SW('orjinal',1),'orijinal'],[SW('mütabakat',1),'mutabakat'],[SW('başka bir değişle'),'başka bir deyişle'],[SW('bir başka değişle'),'bir başka deyişle'],
+  [SW('bu güne kadar'),'bugüne kadar'],[SW('farket',1),'fark et'],[SW('açıkca'),'açıkça'],[SW('şuan'),'şu an'],
+];
+const keepCase=(m,to)=>m[0]===trU(m[0])&&m[0]!==trL(m[0])&&to[0]===trL(to[0])?trU(to[0])+to.slice(1):to;
+function sectionsFlat(R){const out=[];walk(R.sections,(s,num,depth)=>out.push({s,num,depth}));return out;}
+const secByTitle=(R,re)=>sectionsFlat(R).filter(x=>re.test(trL(x.s.title)));
+const secText=s=>{const t=[];const rec=x=>{for(const b of x.blocks)t.push(b.type==='table'?b.rows.flat().join(' '):(b.text||''));x.children.forEach(rec);};rec(s);return t.join('\n');};
+const dateOf=d=>{const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||'');return m?new Date(+m[1],+m[2]-1,+m[3]):null;};
+const addMonths=(d,n)=>{const x=new Date(d);x.setMonth(x.getMonth()+n);return x;};
+const dayDiff=(a,b)=>Math.round((b-a)/86400000);
+const fmtD=d=>d?`${String(d.getDate()).padStart(2,'0')}/${String(d.getMonth()+1).padStart(2,'0')}/${d.getFullYear()}`:'';
+
+function checkReport(R){
+  const W=[],M=R.meta,K=M.mukellef;
+  const add=(lvl,msg,src,where,fix)=>W.push({lvl,msg,src,where:where||{tab:'bilgi'},fix});
+  const F=path=>({tab:'bilgi',path});
+  const vir=VIR_LIKE.has(R.type),tarhiyat=R.type==='vir',gor=/^gor/.test(R.type);
+
+  /* ---- 1. Kapak (Rehber 2.1.2) ---- */
+  for(const[k,l]of[['daire','Daire Başkanlığı'],['tarih','Rapor tarihi'],['sayi','Rapor sayısı'],['konu','İnceleme konusu'],['donem','İnceleme dönemi'],['vergiTuru','Vergi türü']])
+    if(!M[k]&&!(gor&&k==='vergiTuru'))add('warn',`"${l}" boş.`,'Rehber – kapak',F('meta.'+k));
+  M.mufettisler.forEach((m,i)=>{if(!m.ad)add('warn','Raporu düzenleyen Vergi Müfettişinin adı soyadı girilmemiş.','Rehber – kapak',F(`meta.mufettisler.${i}.ad`));});
+  M.gorevler.forEach((g,i)=>{if(!g.tarih)add('warn','Görevlendirme yazısının tarihi girilmemiş.','Rehber – kapak',F(`meta.gorevler.${i}.tarih`));if(!g.sayi)add('warn','Görevlendirme yazısının sayısı girilmemiş.','Rehber – kapak',F(`meta.gorevler.${i}.sayi`));});
+  if(!gor)for(const[k,l]of[['ad','Mükellefin adı/unvanı'],['vkn','Vergi/T.C. kimlik numarası'],['vd','Vergi dairesi (tarha yetkili)'],['adres','Adresi'],['is','İşi'],['meslekKodu','Meslek kodu'],['tel','Telefonu']])
+    if(!K[k])add(k==='meslekKodu'||k==='tel'?'info':'warn',`Mükellefin "${l}" bilgisi boş.`,'Rehber – kapak',F('meta.mukellef.'+k));
+  if(K.vkn&&!/^\d{10,11}$/.test(String(K.vkn).replace(/\s/g,'')))add('err','Vergi kimlik numarası 10, T.C. kimlik numarası 11 haneli olmalı.','Kapak',F('meta.mukellef.vkn'));
+  if(K.vd&&/vergi dairesi/i.test(K.vd))add('info','Vergi dairesi alanına yalnızca adını yazın ("Kozyatağı"); "Vergi Dairesi Müdürlüğü" ifadesi otomatik eklenir.','Kapak',F('meta.mukellef.vd'));
+  if(M.daire&&/daire başkanlığı/i.test(M.daire))add('info','Daire alanına yalnızca birimin adını yazın; "Daire Başkanlığı" ifadesi otomatik eklenir.','Kapak',F('meta.daire'));
+  M.mufettisler.forEach((m,i)=>{if(/(?<![A-Za-zÇĞİÖŞÜçğıöşü])(yrd|yard)\./i.test(m.ad+' '+m.unvan))add('err','Unvan kısaltılmamalı: "Vergi Müfettiş Yardımcısı" yazılmalı.','Rehber 2.1.3.1',F(`meta.mufettisler.${i}.unvan`));});
+
+  /* ---- 2. Yönetmelik: süreler (md. 9, 12, 23) ---- */
+  const gorevT=M.gorevler.map(g=>dateOf(g.tarih)).filter(Boolean).sort((a,b)=>a-b)[0];
+  const bas=dateOf(M.baslama),rap=dateOf(M.tarih);
+  if(vir&&!M.baslama)add('info','İncelemeye başlama tarihini (başlama tutanağının imzalandığı tarih) girerseniz inceleme süresi kontrol edilir.','Yönetmelik md. 9, 23',F('meta.baslama'));
+  if(gorevT&&bas){const d=dayDiff(gorevT,bas);
+    if(d<0)add('err',`İncelemeye başlama tarihi (${fmtD(bas)}) görevlendirme tarihinden (${fmtD(gorevT)}) önce olamaz.`,'Yönetmelik md. 9',F('meta.baslama'));
+    else if(d>45)add('err',`İncelemeye görevden ${d} gün sonra başlanmış: en geç 30 gün (mazerete bağlı en fazla 15 gün ek süreyle 45 gün) içinde başlanmalı.`,'Yönetmelik md. 9/1',F('meta.baslama'));
+    else if(d>30)add('warn',`İncelemeye görevden ${d} gün sonra başlanmış: 30 günlük süre aşılmış; mazerete bağlı ek süre (en fazla 15 gün) alındığından emin olun.`,'Yönetmelik md. 9/1',F('meta.baslama'));}
+  if(bas){
+    const iade=R.type==='virIade'&&/katma/i.test(M.vergiTuru||'');
+    const lim=iade?3:(M.kapsam==='Sınırlı'?6:12),ekMax=iade?2:6,ek=Number(M.ekSure||0);
+    if(ek>ekMax)add('err',`Ek süre en fazla ${ekMax} ay olabilir (girilen: ${ek} ay).`,'Yönetmelik md. 23/3',F('meta.ekSure'));
+    const son=addMonths(bas,lim+Math.min(ek,ekMax)),bitis=rap||new Date();
+    const ad=iade?'KDV iade incelemesi':(M.kapsam==='Sınırlı'?'sınırlı inceleme':'tam inceleme');
+    if(bitis>son)add('err',`İnceleme süresi aşılmış: ${ad} için süre ${lim} ay${ek?` + ${ek} ay ek süre`:''}; son gün ${fmtD(son)}, rapor tarihi ${fmtD(bitis)}.`+(ek<ekMax?' Ek süre aldıysanız "Ek süre" alanına girin.':' Süre aşımı gerekçesiyle yazılı olarak bildirilmeli.'),'Yönetmelik md. 23',F(rap?'meta.tarih':'meta.baslama'));
+    else if(!ek){const ilk=addMonths(bas,lim),kalan=dayDiff(rap||new Date(),ilk);if(!rap&&kalan<=10&&kalan>=0)add('warn',`Süre bitimine ${kalan} gün kaldı (${fmtD(ilk)}). Ek süre, bitimden en geç 10 gün önce gerekçeli yazıyla istenmeli.`,'Yönetmelik md. 23/2',F('meta.ekSure'));}
+  }
+  if(M.ibrazGun!==''&&M.ibrazGun!=null&&Number(M.ibrazGun)<15)add('err',`Defter ve belge isteme yazısında verilen ibraz süresi (${M.ibrazGun} gün) en az 15 gün olmalı.`,'Yönetmelik md. 12/1',F('meta.ibrazGun'));
+
+  /* ---- 3. Yönetmelik md. 19: rapor yapısı ---- */
+  const yrs=(String(M.donem||'').match(/(?:19|20)\d{2}/g)||[]).filter((v,i,a)=>a.indexOf(v)===i);
+  if(yrs.length>1){
+    if(/^(Gelir Vergisi|Kurumlar Vergisi)$/.test(M.vergiTuru))add('err',`Raporlar vergi türü ve dönemi itibarıyla ayrı düzenlenir: ${yrs.join(', ')} için ayrı rapor yazılmalı.`,'Yönetmelik md. 19/1',F('meta.donem'));
+    else add('warn',`Vergilendirme dönemi bir yıldan kısa vergilerde tek rapor takvim yılını (özel hesap döneminde hesap dönemini) aşmamalı: ${yrs.join(', ')}.`,'Yönetmelik md. 19/1',F('meta.donem'));
+  }
+  if(/[,/]| ve /i.test(M.vergiTuru||''))add('err','Birden fazla vergi türü için ayrı ayrı rapor düzenlenir.','Yönetmelik md. 19/2',F('meta.vergiTuru'));
+  if(tarhiyat){
+    const need=[[/^giriş$/,'Giriş'],[/^usul incelemeleri$/,'Usul İncelemeleri'],[/^hesap incelemeleri$/,'Hesap İncelemeleri'],[/^eleştirilen hususlar/,'Eleştirilen Hususlar'],[/^sonuç$/,'Sonuç']];
+    for(const[re,l]of need)if(!R.sections.some(s=>re.test(trL(s.title))))add('err',`Tarhiyat/ceza önerisi içeren raporda "${l}" bölümü bulunmalı.`,'Yönetmelik md. 19/4',{tab:'bolum'});
+    const el=secByTitle(R,/^eleştirilen hususlar/)[0];
+    if(el&&secText(el.s).length>200&&!/ifade|beyan|savunma|itiraz|ileri sür|açıklama|mülahaza/i.test(secText(el.s)))
+      add('warn','Mükellefin inceleme sırasında ileri sürdüğü hususlar ve bunların değerlendirmesi "Eleştirilen Hususlar" bölümünde yer almalı.','Yönetmelik md. 19/4',{tab:'bolum',sec:el.s.id});
+  }
+  if(R.type==='virKabul')add('info','Eleştiri gerektiren husus bulunmadığından bu durum mükellefe yazıyla bildirilmeli.','Yönetmelik md. 19/5',{tab:'bolum'});
+  if(M.ozelge==='Var'){const all=sectionsFlat(R).map(x=>secText(x.s)).join('\n');if(!/özelge/i.test(all))add('err','Mükellef özelge ibraz etmiş: özelge raporda değerlendirilmeli.','Yönetmelik md. 18/2',{tab:'bolum'});}
+
+  /* ---- 4. Sonuç tutarlılığı ---- */
+  const son=sectionsFlat(R).find(x=>/^sonuç$/.test(trL(x.s.title)));
+  if(son&&vir){
+    const t=secText(son.s);
+    if(!/uzlaşma/i.test(t))add('warn','Sonuç bölümünde mükellefin tarhiyat öncesi uzlaşma talebine yer verilmeli.','Rehber – sonuç',{tab:'bolum',sec:son.s.id});
+    if(!/dinlenme/i.test(t))add('warn','Sonuç bölümünde Rapor Değerlendirme Komisyonunda dinlenme talebine yer verilmeli.','Rehber – sonuç',{tab:'bolum',sec:son.s.id});
+    if(M.uzlasma==='Var'&&/uzlaşma talebi bulunmamaktadır/i.test(t))add('err','Kapakta uzlaşma talebi "Var" ama Sonuç bölümünde "bulunmamaktadır" yazıyor.','Tutarlılık',{tab:'bolum',sec:son.s.id});
+    if(M.uzlasma==='Yok'&&/uzlaşma talebi bulunmaktadır/i.test(t))add('err','Kapakta uzlaşma talebi "Yok" ama Sonuç bölümünde "bulunmaktadır" yazıyor.','Tutarlılık',{tab:'bolum',sec:son.s.id});
+    if(M.rdk==='Var'&&/dinlenme talebi bulunmamaktadır/i.test(t))add('err','Dinlenme talebi "Var" seçili ama Sonuç bölümünde "bulunmamaktadır" yazıyor.','Tutarlılık',{tab:'bolum',sec:son.s.id});
+    if(M.rdk==='Yok'&&/dinlenme talebi bulunmaktadır/i.test(t))add('err','Dinlenme talebi "Yok" seçili ama Sonuç bölümünde "bulunmaktadır" yazıyor.','Tutarlılık',{tab:'bolum',sec:son.s.id});
+    const amounts=new Set((t.match(/\d{1,3}(?:\.\d{3})*,\d{2}/g)||[]));
+    for(const d of R.veriler)for(const[k,l]of VERI_SATIRLARI){if(k==='beyan'||k==='iadeTalep')continue;const n=parseNum(d[k]);if(isNaN(n)||!n)continue;const f=fmtTL(n);
+      if(!amounts.has(f))add('warn',`İnceleme verilerindeki ${d.donem||''} dönemi "${l}" (${f} TL) Sonuç bölümünde geçmiyor. Önerilen vergi ve ceza tutarları sonuçta açıkça gösterilmeli.`,'Yönetmelik md. 19/4',{tab:'bolum',sec:son.s.id});}
+  }
+
+  /* ---- 5. Metin: Rehber yazım kuralları + imla ---- */
+  const full=[];const once=new Set();let seen='';
+  const term0=donemTerimi(R);
+  const firstOnly=(key,lvl,msg,src,where)=>{if(once.has(key))return;once.add(key);add(lvl,msg,src,where);};
+  walk(R.sections,(s,num)=>{
+    const empty=!s.blocks.some(b=>(b.text&&b.text.trim())||(b.rows&&b.rows.flat().some(c=>String(c).trim())));
+    if(empty&&!s.children.length)add('warn',`${numStr(num)} ${s.title}: bölüm boş.`,'Rehber',{tab:'bolum',sec:s.id});
+    if(/özel usulsüzlük/i.test(trL(s.title))&&empty)add('warn','"Özel Usulsüzlük" alt başlığı yalnızca bu ceza gerekiyorsa açılır; boşsa kaldırın.','Rehber – usul',{tab:'bolum',sec:s.id});
+    if(/^usul incelemeleri$/.test(trL(s.title))&&empty)add('warn','Usul yönünden eleştiri yoksa "Usul yönünden eleştirilecek bir husus tespit edilmemiştir." yazılmalı.','Rehber – usul',{tab:'bolum',sec:s.id});
+    if(s.title&&s.title.length>110)add('info','Başlık çok uzun; kısaltmayı düşünün.','Rehber',{tab:'bolum',sec:s.id});
+    for(const b of s.blocks){
+      const where={tab:'bolum',sec:s.id,block:b.id};
+      if(b.type==='table'){
+        const rows=b.rows.filter(r=>r.some(c=>String(c).trim()));full.push(rows.flat().join(' '));
+        if(rows.length>45)add('warn',`Tablo ${rows.length} satır: matrah farkını gösteren temel tablolar dışındaki uzun tablolar rapora ek yapılmalı.`,'Rehber 2.1.3.1',where);
+        if(rows.length&&rows.some(r=>r.length!==rows[0].length))add('info','Tablonun bazı satırlarında hücre sayısı farklı.','Tablo',where);
+        continue;
+      }
+      const text=b.text||'';full.push(text);
+      for(const line of linesOf(text)){
+        if(isKurum(R)&&/(?<![A-Za-zÇĞİÖŞÜçğıöşü])Mükellef(?!\s+Kurum)(?![a-zçğıöşü])/.test(line))firstOnly('mk','warn','Kurumlar vergisi mükellefi için "Mükellef" yerine "Mükellef Kurum" ibaresi kullanılmalı.','Rehber 2.1.3.1',where);
+        if(/^Gelir Vergisi$/.test(M.vergiTuru)&&/Mükellef Kurum/.test(line))firstOnly('mg','warn','Gelir vergisi mükellefi için "Mükellef" ibaresi kullanılmalı.','Rehber 2.1.3.1',where);
+        if(term0==='takvim yılı'&&/hesap dönemi/i.test(line))firstOnly('ty','warn','Gelir vergisinde inceleme yılı "takvim yılı" olarak belirtilmeli ("hesap dönemi" kullanılmış).','Rehber 2.1.3.1',where);
+        if(term0==='hesap dönemi'&&/takvim yılı/i.test(line))firstOnly('hd','warn','Kurumlar vergisinde inceleme yılı "hesap dönemi" olarak belirtilmeli ("takvim yılı" kullanılmış).','Rehber 2.1.3.1',where);
+        for(const a of ABBR){if(once.has('ab'+a))continue;const re=new RegExp(`(^|[^A-Za-zÇĞİÖŞÜçğıöşü])${a}(?![A-Za-zÇĞİÖŞÜ])`);const m=re.exec(line);if(!m)continue;once.add('ab'+a);
+          if(!(seen+line.slice(0,m.index+a.length+3)).includes('('+a+')'))add('info',`"${a}" kısaltması ilk geçtiği yerde açık yazımından sonra parantez içinde verilmeli (örn. Vergi Usul Kanunu (VUK)).`,'Rehber 2.1.3.1',where);}
+        seen+=line+'\n';
+        if(/\bYrd\.|\bYard\./.test(line))add('err','"Yrd./Yard." yazılmaz; "Vergi Müfettiş Yardımcısı" yazılmalı.','Rehber 2.1.3.1',where,{block:b.id,from:/Vergi Müfettiş(i)? (Yrd\.|Yard\.)|Yrd\.|Yard\./,to:'Vergi Müfettiş Yardımcısı'});
+        for(const sent of line.split(/(?<=[.!?])\s+/)){const L=sent.replace(/[^A-Za-zÇĞİÖŞÜçğıöşü]/g,'');if(L.length>25&&L===trU(L))add('warn','Vurgu amacıyla cümlenin tamamı büyük harfle yazılmaz: “'+sent.slice(0,50)+'…”','Rehber 2.1.3.1',where);}
+        if(/gibintranet|vdkbis-?mbr['’]?den tespit/i.test(line))add('warn','"Gibintranet / VDKBİS-MBR\'den tespit edilmiştir" yerine tespitin dayanağı yazılmalı.','Rehber 2.1.3.1',where);
+        const ph=line.match(/\[[^\]]{2,60}\]/);if(ph)add('err','Doldurulmamış yer tutucu: '+ph[0],'Taslak',where);
+        if(/dipnot|\bbkz\.? dipnot/i.test(line))add('info','Rapor eklerine yapılan atıflarda dipnot kullanılmaz; atıf cümle sonunda parantez içinde yapılır: (Ek: 1 Tutanak Md. 12).','Rehber 2.1.3.1',where);
+        if(/\(\s*ek\s*[-:]?\s*\d+[^)]*\)/i.test(line)&&!/\(Ek: \d+( Tutanak)?( Madde| Md\.)? ?\d*\)/.test(line))add('info','Tutanak atfı biçimi: (Ek: 1 Tutanak Md. 12).','Rehber 2.1.3.1',where);
+        for(const[re,to]of SPELL){re.lastIndex=0;const m=re.exec(line);if(m){const t2=keepCase(m[0],to);if(m[0]!==t2)add('warn',`Yazım: "${m[0]}" yerine "${t2}" yazılmalı.`,'TDK İmla Kılavuzu',where,{block:b.id,from:m[0],to:t2});}}
+        if(/ {2,}/.test(line))add('info','Kelimeler arasında birden fazla boşluk var.','Yazım',where,{block:b.id,from:/ {2,}/g,to:' '});
+        const sp=line.match(/ +[,.;:](?!\d)/);if(sp)add('info','Noktalama işaretinden önce boşluk bırakılmaz.','Yazım',where,{block:b.id,from:/ +([,.;:])(?!\d)/g,to:'$1'});
+        if(/[,;](?=[A-Za-zÇĞİÖŞÜçğıöşü])/.test(line))add('info','Virgül/noktalı virgülden sonra boşluk bırakılmalı.','Yazım',where,{block:b.id,from:/([,;])(?=[A-Za-zÇĞİÖŞÜçğıöşü])/g,to:'$1 '});
+        const q=(line.match(/[“”"]/g)||[]).length;if(q%2)add('warn','Tırnak işareti kapatılmamış.','Yazım',where);
+        if((line.match(/\(/g)||[]).length!==(line.match(/\)/g)||[]).length)add('warn','Parantez sayısı eşit değil (açılan/kapanan).','Yazım',where);
+        if(b.type==='p'&&/^[a-zçğıöşü]/.test(line))add('info','Paragraf küçük harfle başlıyor.','Yazım',where);
+        if(b.type==='p'&&line.length>40&&!/[.:;!?)”"]$/.test(line))add('info','Paragraf noktalama işaretiyle bitmiyor.','Yazım',where);
+        const am=line.match(/\b\d{4,}(?:,\d{1,2})? ?(?:TL|₺)/);if(am)add('info',`Tutar biçimi: "${am[0]}" → binlik ayraçlı yazın (örn. 1.250.000,00 TL).`,'Yazım',where);
+        if(/\d\.-\s?TL/.test(line))add('info','"1.000.-TL" yerine "1.000,00 TL" biçimi kullanılmalı.','Yazım',where);
+      }
+    }
+  });
+  const ft=full.join('\n');
+  const d1=(ft.match(/\b\d{1,2}\/\d{1,2}\/\d{4}\b/g)||[]).length,d2=(ft.match(/\b\d{1,2}\.\d{1,2}\.\d{4}\b/g)||[]).length;
+  if(d1&&d2)add('info',`Tarihler iki farklı biçimde yazılmış (${d1} kez gg/aa/yyyy, ${d2} kez gg.aa.yyyy); birini tercih edin.`,'Yazım',{tab:'bolum'});
+  if(K.vkn){const ids=new Set(ft.match(/\b\d{10,11}\b/g)||[]);const known=new Set([String(K.vkn).replace(/\s/g,''),...M.ortaklar.map(o=>String(o.vkn||''))]);for(const id of ids)if(!known.has(id))add('info',`Metinde kapaktaki mükellefle eşleşmeyen bir kimlik numarası var (${id}). Başka bir kişiye aitse sorun yok; yazım hatası olup olmadığını kontrol edin.`,'Tutarlılık',{tab:'bolum'});}
+
+  /* ---- 6. Ekler ve imza ---- */
+  if(R.ayar.ekDizini)R.ekler.forEach((e,i)=>{if(e.ad&&!e.sayfa)add('info',`Ek ${i+1} için sayfa adedi girilmemiş.`,'Rehber – ek dizini',{tab:'ekler',path:`ekler.${i}.sayfa`});});
+  if(M.mufettisler.filter(m=>m.ad).length>1)add('info','Birden fazla Vergi Müfettişi: imzalarda en kıdemli Vergi Müfettişi en solda yer alır; listeyi kıdem sırasına göre girin.','Rehber 2.1.3.1',F('meta.mufettisler.0.ad'));
+  const order={err:0,warn:1,info:2};W.sort((a,b)=>order[a.lvl]-order[b.lvl]);
+  return W;
+}
+function applyFix(R,fix){
+  const b=findBlock(R,fix.block);if(!b||typeof b.text!=='string')return false;
+  const re=fix.from instanceof RegExp?new RegExp(fix.from.source,fix.from.flags.includes('g')?fix.from.flags:fix.from.flags+'g'):new RegExp(fix.from.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'g');
+  const nt=b.text.replace(re,fix.to);if(nt===b.text)return false;b.text=nt;return true;
+}
+function findBlock(R,id){let f=null;walk(R.sections,s=>{for(const b of s.blocks)if(b.id===id)f=b;});return f;}
+function findSection(R,id){let f=null;walk(R.sections,s=>{if(s.id===id)f=s;});return f;}
+
+/* ---------------- Word (docx) ---------------- */
+const CRC_T=(()=>{const t=new Uint32Array(256);for(let n=0;n<256;n++){let c=n;for(let k=0;k<8;k++)c=c&1?0xEDB88320^(c>>>1):c>>>1;t[n]=c>>>0;}return t;})();
+function crc32(u8){let c=0xFFFFFFFF;for(let i=0;i<u8.length;i++)c=CRC_T[(c^u8[i])&0xFF]^(c>>>8);return(c^0xFFFFFFFF)>>>0;}
+async function deflateRaw(u8){if(typeof CompressionStream==='undefined')return null;try{return new Uint8Array(await new Response(new Blob([u8]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer());}catch(e){return null;}}
+async function zip(files){
+  const enc=new TextEncoder();const chunks=[],central=[];let off=0;
+  for(const f of files){
+    const data=typeof f.data==='string'?enc.encode(f.data):f.data;const nb=enc.encode(f.name),crc=crc32(data);let comp=data,method=0;
+    const c=await deflateRaw(data);if(c&&c.length<data.length){comp=c;method=8;}
+    const lh=new Uint8Array(30+nb.length),lv=new DataView(lh.buffer);
+    lv.setUint32(0,0x04034b50,true);lv.setUint16(4,20,true);lv.setUint16(6,0x0800,true);lv.setUint16(8,method,true);lv.setUint16(12,0x21,true);lv.setUint32(14,crc,true);lv.setUint32(18,comp.length,true);lv.setUint32(22,data.length,true);lv.setUint16(26,nb.length,true);lh.set(nb,30);
+    const ch=new Uint8Array(46+nb.length),cv=new DataView(ch.buffer);
+    cv.setUint32(0,0x02014b50,true);cv.setUint16(4,20,true);cv.setUint16(6,20,true);cv.setUint16(8,0x0800,true);cv.setUint16(10,method,true);cv.setUint16(14,0x21,true);cv.setUint32(16,crc,true);cv.setUint32(20,comp.length,true);cv.setUint32(24,data.length,true);cv.setUint16(28,nb.length,true);cv.setUint32(42,off,true);ch.set(nb,46);
+    chunks.push(lh,comp);central.push(ch);off+=lh.length+comp.length;
+  }
+  const cds=central.reduce((a,c)=>a+c.length,0);const end=new Uint8Array(22),ev=new DataView(end.buffer);
+  ev.setUint32(0,0x06054b50,true);ev.setUint16(8,files.length,true);ev.setUint16(10,files.length,true);ev.setUint32(12,cds,true);ev.setUint32(16,off,true);
+  return new Blob([...chunks,...central,end],{type:'application/vnd.openxmlformats-officedocument.wordprocessingml.document'});
+}
+const XH='<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\r\n';
+const NSW='xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"';
+function buildDocxParts(R){
+  const A=R.ayar,M=R.meta,T=TYPES[R.type]||TYPES.vir;
+  const font=A.font==='arial'?'Arial':'Times New Roman',sz=A.font==='arial'?22:24,tsz=A.font==='arial'?18:20;
+  const line=Math.round(240*Number(A.satir||1.15));
+  const run=(r,o={})=>{const b=r.b||o.b,i=r.i||o.i;return `<w:r><w:rPr>${b?'<w:b/><w:bCs/>':''}${i?'<w:i/><w:iCs/>':''}${o.sz?`<w:sz w:val="${o.sz}"/><w:szCs w:val="${o.sz}"/>`:''}</w:rPr><w:t xml:space="preserve">${xesc(r.t)}</w:t></w:r>`;};
+  const para=(runs,ppr='',o={})=>`<w:p><w:pPr>${ppr}</w:pPr>${runs.map(r=>run(r,o)).join('')}</w:p>`;
+  const txt=(s,ppr,o)=>para(parseInline(s,A.italikTirnak),ppr,o);
+  const body=[];
+  const tableXml=(rows,opt={})=>{
+    if(!rows.length)return '';
+    const ncol=Math.max(...rows.map(r=>r.length));
+    let x=`<w:tbl><w:tblPr><w:tblW w:w="0" w:type="auto"/><w:jc w:val="center"/><w:tblBorders>${opt.noBorder?'':['top','left','bottom','right','insideH','insideV'].map(s=>`<w:${s} w:val="single" w:sz="4" w:space="0" w:color="000000"/>`).join('')}</w:tblBorders><w:tblLayout w:type="autofit"/><w:tblCellMar><w:left w:w="85" w:type="dxa"/><w:right w:w="85" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${'<w:gridCol/>'.repeat(ncol)}</w:tblGrid>`;
+    rows.forEach((r,ri)=>{
+      const hdr=opt.head&&ri===0,tot=opt.total&&ri===rows.length-1;
+      x+='<w:tr>'+(hdr?'<w:trPr><w:tblHeader/><w:cantSplit/></w:trPr>':'<w:trPr><w:cantSplit/></w:trPr>');
+      for(let c=0;c<ncol;c++){
+        const v=fmtCell(r[c]==null?'':r[c],A.sayiBicim&&!hdr&&!(opt.labelCol===c));
+        const right=!hdr&&isNumericCell(v),center=hdr;
+        x+=`<w:tc><w:tcPr>${hdr?'<w:shd w:val="clear" w:color="auto" w:fill="F2F2F2"/>':''}<w:vAlign w:val="center"/></w:tcPr>${para(parseInline(v,A.italikTirnak),`<w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/><w:jc w:val="${center?'center':right?'right':'left'}"/>`,{sz:tsz,b:hdr||tot})}</w:tc>`;
+      }
+      x+='</w:tr>';
+    });
+    return x+'</w:tbl>'+`<w:p><w:pPr><w:spacing w:before="0" w:after="0" w:line="120" w:lineRule="exact"/></w:pPr></w:p>`;
+  };
+  // ---- kapak ----
+  if(A.kapak){
+    const C='<w:jc w:val="center"/><w:ind w:firstLine="0"/>';
+    body.push(para([{t:'T.C.'}],C+'<w:spacing w:before="600" w:after="0"/>',{b:true}));
+    body.push(para([{t:'HAZİNE VE MALİYE BAKANLIĞI'}],C+'<w:spacing w:after="0"/>',{b:true}));
+    body.push(para([{t:'Vergi Denetim Kurulu Başkanlığı'}],C+'<w:spacing w:after="0"/>',{b:true}));
+    body.push(para([{t:(M.daire?M.daire+' ':'…… ')+'Daire Başkanlığı'}],C+'<w:spacing w:after="0"/>',{b:true}));
+    body.push(para([{t:T.cover}],C+'<w:spacing w:before="1200" w:after="60"/>',{b:true,sz:32}));
+    if(T.sub)body.push(para([{t:T.sub}],C+'<w:spacing w:after="600"/>',{b:true,sz:26}));else body.push(para([],'<w:spacing w:after="600"/>'));
+    const muf=M.mufettisler.filter(m=>m.ad).map(m=>`${m.ad}, ${m.unvan}`).join('\n');
+    const gor=M.gorevler.filter(g=>g.tarih||g.sayi).map(g=>`${fmtDate(g.tarih)} tarih ve ${g.sayi} sayılı`).join('\n');
+    const K=M.mukellef;
+    const rows=[['Raporun Tarihi ve Sayısı',`${fmtDate(M.tarih)}${M.sayi?' – '+M.sayi:''}`],['Raporu Düzenleyen(ler)',muf],['Görevlendirme Yazısı',gor],['İnceleme Konusu',M.konu],['Vergi Türü',M.vergiTuru],['İnceleme Dönemi',M.donem],['İncelemenin Kapsamı',M.kapsam],
+      ['Mükellefin Adı Soyadı / Unvanı',K.ad],['Vergi / T.C. Kimlik Numarası',K.vkn],['Vergi Dairesi (Tarha Yetkili)',K.vd],['Adresi',K.adres],['İşi',K.is],['Meslek Kodu',K.meslekKodu],['Telefonu',K.tel]];
+    if(VIR_LIKE.has(R.type))rows.push(['Tarhiyat Öncesi Uzlaşma Talebi',M.uzlasma]);
+    const cr=rows.filter(r=>String(r[1]||'').trim());
+    let x=`<w:tbl><w:tblPr><w:tblW w:w="5000" w:type="pct"/><w:jc w:val="center"/><w:tblBorders>${['top','left','bottom','right','insideH','insideV'].map(s=>`<w:${s} w:val="single" w:sz="4" w:space="0" w:color="000000"/>`).join('')}</w:tblBorders><w:tblCellMar><w:left w:w="85" w:type="dxa"/><w:right w:w="85" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid><w:gridCol w:w="3400"/><w:gridCol w:w="5600"/></w:tblGrid>`;
+    for(const[l,v]of cr){x+=`<w:tr><w:trPr><w:cantSplit/></w:trPr><w:tc><w:tcPr><w:tcW w:w="1900" w:type="pct"/></w:tcPr>${para([{t:l}],'<w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/>',{b:true,sz:tsz+2})}</w:tc><w:tc><w:tcPr><w:tcW w:w="3100" w:type="pct"/></w:tcPr>${String(v).split('\n').map(s=>para([{t:s}],'<w:spacing w:before="20" w:after="20" w:line="240" w:lineRule="auto"/><w:ind w:firstLine="0"/>',{sz:tsz+2})).join('')}</w:tc></w:tr>`;}
+    body.push(x+'</w:tbl>');
+    const vr=veriRows(R);
+    if(vr){body.push(para([{t:'İnceleme Verileri'}],'<w:spacing w:before="240" w:after="60"/><w:ind w:firstLine="0"/><w:jc w:val="center"/>',{b:true}));body.push(tableXml(vr,{head:true,labelCol:0}));}
+    body.push(`<w:p><w:pPr><w:sectPr>${sectPr(R,'kapak')}</w:sectPr></w:pPr></w:p>`);
+  }
+  // ---- metin ----
+  walk(R.sections,(s,num,depth)=>{
+    const h=headingCase(s.title,depth);
+    body.push(para([{t:numStr(num)+' '+h}],`<w:pStyle w:val="Baslik${Math.min(depth,3)}"/>`));
+    for(const b of s.blocks){
+      if(b.type==='p')for(const l of linesOf(b.text))body.push(txt(l,''));
+      else if(b.type==='quote')for(const l of linesOf(b.text)){const q=/^[“"]/.test(l)?l:'“'+l.replace(/"$/,'')+'”';body.push(para([{t:q.replace(/^"/,'“').replace(/"$/,'”'),i:true}],''));}
+      else if(b.type==='list')for(const l of linesOf(b.text))body.push(`<w:p><w:pPr><w:ind w:left="1066" w:hanging="357"/></w:pPr>${run({t:'•'})}<w:r><w:tab/></w:r>${parseInline(l,A.italikTirnak).map(r=>run(r)).join('')}</w:p>`);
+      else if(b.type==='table'){if(b.caption)body.push(para([{t:b.caption}],'<w:keepNext/><w:jc w:val="center"/><w:ind w:firstLine="0"/><w:spacing w:before="120" w:after="60"/>',{b:true,sz:tsz+2}));body.push(tableXml(b.rows.filter(r=>r.some(c=>String(c||'').trim())),{head:b.head!==false,total:!!b.total,labelCol:-1}));}
+    }
+  });
+  // ---- imza ----
+  const mf=M.mufettisler.filter(m=>m.ad);
+  if(mf.length){
+    body.push(para([],'<w:spacing w:before="360"/>'));
+    const per=Math.min(mf.length,3);const W=Math.round(9000/per);
+    let x=`<w:tbl><w:tblPr><w:tblW w:w="${mf.length===1?3600:9000}" w:type="dxa"/><w:jc w:val="${mf.length===1?'right':'center'}"/><w:tblBorders><w:top w:val="nil"/><w:left w:val="nil"/><w:bottom w:val="nil"/><w:right w:val="nil"/><w:insideH w:val="nil"/><w:insideV w:val="nil"/></w:tblBorders></w:tblPr><w:tblGrid>${`<w:gridCol w:w="${mf.length===1?3600:W}"/>`.repeat(per)}</w:tblGrid>`;
+    for(let i=0;i<mf.length;i+=per){x+='<w:tr><w:trPr><w:cantSplit/></w:trPr>';for(let k=0;k<per;k++){const m=mf[i+k];const P='<w:jc w:val="center"/><w:ind w:firstLine="0"/><w:spacing w:before="0" w:after="0"/>';
+      x+=`<w:tc><w:tcPr><w:tcW w:w="${mf.length===1?3600:W}" w:type="dxa"/></w:tcPr>${m?para([],P+'<w:spacing w:before="600" w:after="0"/>')+para([{t:m.ad}],P)+para([{t:m.unvan}],P):para([],P)}</w:tc>`;}
+      x+='</w:tr>';}
+    body.push(x+'</w:tbl>');
+  }
+  // ---- ek dizini ----
+  const ekler=R.ekler.filter(e=>e.ad);
+  const ekOn=A.ekDizini&&ekler.length;
+  if(ekOn){
+    body.push(`<w:p><w:pPr><w:sectPr>${sectPr(R,'metin')}</w:sectPr></w:pPr></w:p>`);
+    body.push(para([{t:'EK DİZİNİ'}],'<w:jc w:val="center"/><w:ind w:firstLine="0"/><w:spacing w:after="240"/>',{b:true}));
+    const tot=ekler.reduce((a,e)=>a+(parseInt(e.sayfa,10)||0),0);
+    const rows=[['Ek No','Ek Adı','Sayfa Adedi'],...ekler.map((e,i)=>[String(i+1),e.ad,String(e.sayfa||'')]),['','Toplam Sayfa',String(tot)]];
+    if(R.cd)rows.push(['','CD/DVD Adedi',String(R.cd)]);
+    body.push(tableXml(rows,{head:true,labelCol:1}));
+  }
+  const docXml=XH+`<w:document ${NSW}><w:body>${body.join('')}<w:sectPr>${sectPr(R,ekOn?'ek':'metin')}</w:sectPr></w:body></w:document>`;
+  const hdr=(t,pageNo)=>XH+`<w:${pageNo==null?'hdr':'ftr'} ${NSW}>${pageNo?`<w:p><w:pPr><w:jc w:val="center"/><w:ind w:firstLine="0"/><w:spacing w:after="0"/></w:pPr><w:fldSimple w:instr=" PAGE "><w:r><w:t>1</w:t></w:r></w:fldSimple><w:r><w:t>/</w:t></w:r><w:fldSimple w:instr=" SECTIONPAGES "><w:r><w:t>1</w:t></w:r></w:fldSimple></w:p>`:''}<w:p><w:pPr><w:jc w:val="center"/><w:ind w:firstLine="0"/><w:spacing w:after="0"/></w:pPr>${t?`<w:r><w:rPr><w:b/></w:rPr><w:t>${xesc(t)}</w:t></w:r>`:''}</w:p></w:${pageNo==null?'hdr':'ftr'}>`;
+  const gz=M.gizlilik&&M.gizlilik!=='Yok'?M.gizlilik:'';
+  const styles=XH+`<w:styles ${NSW}><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="${font}" w:hAnsi="${font}" w:cs="${font}" w:eastAsia="${font}"/><w:sz w:val="${sz}"/><w:szCs w:val="${sz}"/><w:lang w:val="tr-TR"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:before="0" w:after="120" w:line="${line}" w:lineRule="auto"/><w:ind w:firstLine="709"/><w:jc w:val="both"/></w:pPr></w:pPrDefault></w:docDefaults>`+
+    `<w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style>`+
+    [1,2,3].map(n=>`<w:style w:type="paragraph" w:styleId="Baslik${n}"><w:name w:val="heading ${n}"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:keepNext/><w:keepLines/><w:spacing w:before="${n===1?240:180}" w:after="120"/><w:ind w:firstLine="709"/><w:jc w:val="left"/><w:outlineLvl w:val="${n-1}"/></w:pPr><w:rPr><w:b/><w:bCs/></w:rPr></w:style>`).join('')+
+    `<w:style w:type="table" w:default="1" w:styleId="NormalTablo"><w:name w:val="Normal Table"/><w:tblPr><w:tblCellMar><w:top w:w="0" w:type="dxa"/><w:left w:w="85" w:type="dxa"/><w:bottom w:w="0" w:type="dxa"/><w:right w:w="85" w:type="dxa"/></w:tblCellMar></w:tblPr></w:style></w:styles>`;
+  const rels=XH+`<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/><Relationship Id="rIdH" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/header" Target="header1.xml"/><Relationship Id="rIdF1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer1.xml"/><Relationship Id="rIdF2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/footer" Target="footer2.xml"/></Relationships>`;
+  const ct=XH+`<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/header1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.header+xml"/><Override PartName="/word/footer1.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/><Override PartName="/word/footer2.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.footer+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/></Types>`;
+  const root=XH+`<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/><Relationship Id="rId2" Type="http://schemas.openxmlformats.org/package/2006/relationships/metadata/core-properties" Target="docProps/core.xml"/></Relationships>`;
+  const core=XH+`<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><dc:title>${xesc(T.cover)}</dc:title><dc:creator></dc:creator></cp:coreProperties>`;
+  return[{name:'[Content_Types].xml',data:ct},{name:'_rels/.rels',data:root},{name:'docProps/core.xml',data:core},{name:'word/document.xml',data:docXml},{name:'word/styles.xml',data:styles},{name:'word/_rels/document.xml.rels',data:rels},{name:'word/header1.xml',data:hdr(gz,null)},{name:'word/footer1.xml',data:hdr(gz,false).replace(/<w:hdr/,'<w:ftr').replace(/w:hdr>/,'w:ftr>')},{name:'word/footer2.xml',data:hdr(gz,true)}];
+}
+function sectPr(R,kind){
+  const m='<w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1418" w:right="1418" w:bottom="1418" w:left="1418" w:header="567" w:footer="567" w:gutter="0"/>';
+  const ref=`<w:headerReference w:type="default" r:id="rIdH"/><w:footerReference w:type="default" r:id="${kind==='metin'?'rIdF2':'rIdF1'}"/>`;
+  return ref+m+(kind==='metin'?'<w:pgNumType w:start="1"/>':'');
+}
+function veriRows(R){
+  const V=R.veriler.filter(d=>d.donem);if(!V.length)return null;
+  const used=VERI_SATIRLARI.filter(([k])=>V.some(d=>String(d[k]||'').trim()));if(!used.length)return null;
+  return[['Dönem',...V.map(d=>d.donem)],...used.map(([k,l])=>[l,...V.map(d=>{const n=parseNum(d[k]);return isNaN(n)?(d[k]||''):fmtTL(n);})])];
+}
+async function buildDocx(R){return zip(buildDocxParts(R));}
+
+/* ---------------- Önizleme (HTML) ---------------- */
+function previewHtml(R){
+  const A=R.ayar,M=R.meta,T=TYPES[R.type]||TYPES.vir;const it=s=>parseInline(s,A.italikTirnak).map(r=>`<span style="${r.b?'font-weight:700;':''}${r.i?'font-style:italic;':''}">${hesc(r.t)}</span>`).join('');
+  const tbl=(rows,head,labelCol)=>'<table class="rt">'+rows.filter(r=>r.some(c=>String(c||'').trim())).map((r,ri)=>'<tr>'+r.map((c,ci)=>{const v=fmtCell(c,A.sayiBicim&&!(head&&ri===0)&&ci!==labelCol);const h=head&&ri===0;return `<${h?'th':'td'} class="${!h&&isNumericCell(v)?'num':''}">${it(v)}</${h?'th':'td'}>`;}).join('')+'</tr>').join('')+'</table>';
+  let h='';const gz=M.gizlilik&&M.gizlilik!=='Yok'?`<div class="gz">${hesc(M.gizlilik)}</div>`:'';
+  if(A.kapak){
+    const K=M.mukellef;
+    h+=`<div class="pg cover">${gz}<p class="c b">T.C.<br>HAZİNE VE MALİYE BAKANLIĞI<br>Vergi Denetim Kurulu Başkanlığı<br>${hesc(M.daire||'……')} Daire Başkanlığı</p><p class="c b big">${hesc(T.cover)}</p>${T.sub?`<p class="c b">${hesc(T.sub)}</p>`:''}`;
+    const rows=[['Raporun Tarihi ve Sayısı',`${fmtDate(M.tarih)}${M.sayi?' – '+M.sayi:''}`],['Raporu Düzenleyen(ler)',M.mufettisler.filter(m=>m.ad).map(m=>m.ad+', '+m.unvan).join('<br>')],['Görevlendirme Yazısı',M.gorevler.filter(g=>g.tarih||g.sayi).map(g=>`${fmtDate(g.tarih)} tarih ve ${hesc(g.sayi)} sayılı`).join('<br>')],['İnceleme Konusu',hesc(M.konu)],['Vergi Türü',hesc(M.vergiTuru)],['İnceleme Dönemi',hesc(M.donem)],['İncelemenin Kapsamı',hesc(M.kapsam)],['Mükellefin Adı Soyadı / Unvanı',hesc(K.ad)],['Vergi / T.C. Kimlik Numarası',hesc(K.vkn)],['Vergi Dairesi (Tarha Yetkili)',hesc(K.vd)],['Adresi',hesc(K.adres)],['İşi',hesc(K.is)],['Meslek Kodu',hesc(K.meslekKodu)],['Telefonu',hesc(K.tel)]];
+    if(VIR_LIKE.has(R.type))rows.push(['Tarhiyat Öncesi Uzlaşma Talebi',hesc(M.uzlasma)]);
+    h+='<table class="rt kv">'+rows.filter(r=>String(r[1]||'').trim()).map(r=>`<tr><th>${r[0]}</th><td>${r[1]}</td></tr>`).join('')+'</table>';
+    const vr=veriRows(R);if(vr)h+='<p class="c b">İnceleme Verileri</p>'+tbl(vr,true,0);
+    h+=gz+'</div>';
+  }
+  h+=`<div class="pg">${gz}`;
+  walk(R.sections,(s,num,depth)=>{
+    h+=`<h${Math.min(depth+1,4)} data-sec="${s.id}">${numStr(num)} ${hesc(headingCase(s.title,depth))}</h${Math.min(depth+1,4)}>`;
+    for(const b of s.blocks){
+      if(b.type==='p')h+=linesOf(b.text).map(l=>`<p>${it(l)}</p>`).join('');
+      else if(b.type==='quote')h+=linesOf(b.text).map(l=>`<p><i>${hesc(/^[“"]/.test(l)?l:'“'+l+'”')}</i></p>`).join('');
+      else if(b.type==='list')h+='<ul>'+linesOf(b.text).map(l=>`<li>${it(l)}</li>`).join('')+'</ul>';
+      else if(b.type==='table')h+=(b.caption?`<p class="c b cap">${hesc(b.caption)}</p>`:'')+tbl(b.rows,b.head!==false,-1);
+    }
+  });
+  const mf=M.mufettisler.filter(m=>m.ad);
+  if(mf.length)h+=`<div class="sig ${mf.length===1?'one':''}">`+mf.map(m=>`<div><br><br>${hesc(m.ad)}<br>${hesc(m.unvan)}</div>`).join('')+'</div>';
+  h+=`<div class="pno">Sayfa numarası: alt ortada 1/N biçiminde</div>${gz}</div>`;
+  const ekler=R.ekler.filter(e=>e.ad);
+  if(A.ekDizini&&ekler.length){const tot=ekler.reduce((a,e)=>a+(parseInt(e.sayfa,10)||0),0);h+=`<div class="pg">${gz}<p class="c b">EK DİZİNİ</p>`+tbl([['Ek No','Ek Adı','Sayfa Adedi'],...ekler.map((e,i)=>[String(i+1),e.ad,String(e.sayfa||'')]),['','Toplam Sayfa',String(tot)],...(R.cd?[['','CD/DVD Adedi',String(R.cd)]]:[])],true,1)+gz+'</div>';}
+  return h;
+}
+if(typeof module!=='undefined'&&typeof document==='undefined')module.exports={applyFix,findBlock,findSection,VERI_SATIRLARI,TYPES,newReport,buildDocx,buildDocxParts,checkReport,girisTaslak,sonucTaslak,previewHtml,headingCase,parseInline,fmtCell,mkSection,uid};
+</script>
+<script>'use strict';
+/* ====================== Rapor Oluşturucu – arayüz ====================== */
+const $=id=>document.getElementById(id);
+const AS_KEY='ro-taslak',AS_FLAG='ro-otomatik';
+const store={get:k=>{try{return localStorage.getItem(k);}catch(e){return null;}},set:(k,v)=>{try{localStorage.setItem(k,v);return true;}catch(e){return false;}},del:k=>{try{localStorage.removeItem(k);}catch(e){}}};
+let R=null,TAB='bilgi',SEC=null,ISS=[],dirty=false,chkT=null,saveT=null;
+const autoOn=()=>store.get(AS_FLAG)==='1';
+function toast(m){const t=$('toast');t.textContent=m;t.classList.add('show');clearTimeout(t._h);t._h=setTimeout(()=>t.classList.remove('show'),2800);}
+function migrate(o){const base=newReport(o.type||'vir');const fill=(a,b)=>{for(const k in b){if(a[k]===undefined)a[k]=b[k];else if(b[k]&&typeof b[k]==='object'&&!Array.isArray(b[k])&&typeof a[k]==='object')fill(a[k],b[k]);}};fill(o,base);return o;}
+function init(){
+  const saved=autoOn()&&store.get(AS_KEY);
+  if(saved){try{R=migrate(JSON.parse(saved));}catch(e){R=null;}}
+  if(!R)R=newReport('vir');
+  bind();render();runCheck();
+}
+/* ---------- yol tabanlı veri bağlama ---------- */
+function getP(p){return p.split('.').reduce((o,k)=>o==null?o:o[k],R);}
+function setP(p,v){const ks=p.split('.');const last=ks.pop();const o=ks.reduce((o,k)=>o[k],R);o[last]=v;}
+function changed(){dirty=true;clearTimeout(chkT);chkT=setTimeout(runCheck,350);if(autoOn()){clearTimeout(saveT);saveT=setTimeout(()=>store.set(AS_KEY,JSON.stringify(R)),600);}}
+/* ---------- kontrol ve işaretleme ---------- */
+function runCheck(){
+  ISS=checkReport(R);
+  const cnt=t=>{const a=ISS.filter(i=>i.where.tab===t);return{e:a.filter(i=>i.lvl==='err').length,w:a.filter(i=>i.lvl==='warn').length};};
+  for(const t of['bilgi','bolum','ekler']){const c=cnt(t),el=$('n-'+t);el.textContent=c.e||c.w||'';el.className='n '+(c.e?'err':c.w?'warn':'');}
+  const e=ISS.filter(i=>i.lvl==='err').length,w=ISS.filter(i=>i.lvl==='warn').length,k=$('n-kontrol');k.textContent=e+w||'';k.className='n '+(e?'err':w?'warn':'');
+  markIssues();
+  if(TAB==='kontrol')renderKontrol();
+}
+function lvlMax(a){return a.some(i=>i.lvl==='err')?'err':a.some(i=>i.lvl==='warn')?'warn':a.length?'info':'';}
+function msgHtml(i){return `<div class="imsg ${i.lvl}" data-auto="1">${hesc(i.msg)} <span class="muted">(${hesc(i.src)})</span>${i.fix?` <button class="btn small" data-fix="${ISS.indexOf(i)}">Düzelt</button>`:''}</div>`;}
+function markIssues(){
+  const m=$('main');m.querySelectorAll('[data-auto]').forEach(e=>e.remove());m.querySelectorAll('.issue').forEach(e=>e.classList.remove('issue','err'));
+  if(TAB==='bilgi'||TAB==='ekler'){
+    for(const i of ISS){if(!i.where.path||i.where.tab!==TAB)continue;const el=m.querySelector(`[data-bind="${i.where.path}"]`);if(!el)continue;
+      el.classList.add('issue');if(i.lvl==='err')el.classList.add('err');(el.closest('.f')||el.parentNode).insertAdjacentHTML('beforeend',msgHtml(i));}
+  }
+  if(TAB==='bolum'){
+    const tree=$('tree');if(tree)tree.querySelectorAll('[data-sid]').forEach(b=>{const s=findSection(R,b.dataset.sid);const ids=new Set();const rec=x=>{ids.add(x.id);x.children.forEach(rec);};rec(s);
+      const lv=lvlMax(ISS.filter(i=>i.where.sec&&ids.has(i.where.sec)&&i.lvl!=='info'));const d=b.querySelector('.dot');d.className='dot '+lv;});
+    const box=$('secIssues');if(box){const a=ISS.filter(i=>i.where.tab==='bolum'&&((i.where.sec===SEC&&!i.where.block)||(!i.where.sec&&!i.where.block&&SEC===R.sections[0].id)));box.innerHTML=a.map(msgHtml).join('');}
+    for(const i of ISS){if(!i.where.block)continue;const el=m.querySelector(`.blk[data-block="${i.where.block}"]`);if(!el)continue;el.classList.add('issue');if(i.lvl==='err')el.classList.add('err');el.insertAdjacentHTML('beforeend',msgHtml(i));}
+  }
+}
+function jump(w){
+  TAB=w.tab;if(w.sec)SEC=w.sec;render();
+  setTimeout(()=>{const m=$('main');let el=null;
+    if(w.path)el=m.querySelector(`[data-bind="${w.path}"]`);
+    else if(w.block)el=m.querySelector(`.blk[data-block="${w.block}"]`);
+    else if(w.sec)el=$('secEditor');
+    if(el){el.scrollIntoView({behavior:'smooth',block:'center'});el.classList.remove('flash');void el.offsetWidth;el.classList.add('flash');const f=el.matches('input,select,textarea')?el:el.querySelector('textarea,input');if(f)f.focus({preventScroll:true});}
+  },60);
+}
+/* ---------- render ---------- */
+function render(){
+  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.tab===TAB));
+  const m=$('main');
+  ({bilgi:renderBilgi,veri:renderVeri,bolum:renderBolum,ekler:renderEkler,kontrol:renderKontrol,onizleme:renderOnizleme})[TAB]();
+  markIssues();
+  if(TAB!=='bolum')window.scrollTo(0,0);
+}
+const opt=(v,l,cur)=>`<option value="${hesc(v)}"${String(cur)===String(v)?' selected':''}>${hesc(l)}</option>`;
+const fText=(p,l,ph,cls='')=>`<label class="f ${cls}"><span>${l}</span><input type="text" data-bind="${p}" value="${hesc(getP(p)||'')}" placeholder="${hesc(ph||'')}"></label>`;
+const fDate=(p,l)=>`<label class="f"><span>${l}</span><input type="date" data-bind="${p}" value="${hesc(getP(p)||'')}"></label>`;
+const fSel=(p,l,opts)=>`<label class="f"><span>${l}</span><select data-bind="${p}">${opts.map(o=>Array.isArray(o)?opt(o[0],o[1],getP(p)):opt(o,o,getP(p))).join('')}</select></label>`;
+const fChk=(p,l)=>`<label style="display:flex;gap:8px;align-items:center;cursor:pointer"><input type="checkbox" data-bind="${p}" ${getP(p)?'checked':''}> ${l}</label>`;
+function renderBilgi(){
+  const M=R.meta,vir=VIR_LIKE.has(R.type);
+  let h=`<div class="card"><h2>Rapor</h2><div class="grid">
+    <label class="f full"><span>Rapor türü</span><div class="row" style="align-items:center"><select id="selType" style="flex:1">${Object.entries(TYPES).map(([k,t])=>opt(k,t.label,R.type)).join('')}</select><button class="btn small" id="bRebuild">Bölümleri bu türe göre yeniden kur</button></div></label>
+    ${fSel('meta.gizlilik','Gizlilik derecesi',['HİZMETE ÖZEL','GİZLİ','ÇOK GİZLİ','Yok'])}
+    ${fText('meta.daire','Daire Başkanlığı (yalnız adı)','İstanbul Sektörel-2 Denetim')}
+    ${fDate('meta.tarih','Rapor tarihi')}${fText('meta.sayi','Rapor sayısı','2026/…')}
+    ${fSel('meta.vergiTuru','Vergi türü',[['','— seçin —'],...VERGI_TURLERI])}
+    ${fText('meta.donem','İnceleme dönemi','2022  veya  2022/01-2022/12')}
+    ${fSel('meta.kapsam','İncelemenin kapsamı',['Tam','Sınırlı'])}
+    ${fText('meta.konu','İnceleme konusu','Sahte belge kullanma…','full')}
+  </div></div>`;
+  h+=`<div class="card"><h2>İnceleme süreleri <span class="muted" style="text-transform:none;letter-spacing:0">– Yönetmelik md. 9, 12, 23 kontrolleri için</span></h2><div class="grid">
+    ${fDate('meta.baslama','İncelemeye başlama tarihi (tutanak)')}
+    ${fSel('meta.ekSure','Alınan ek süre',[['0','Yok'],...[1,2,3,4,5,6].map(n=>[String(n),n+' ay'])])}
+    <label class="f"><span>Defter-belge ibraz süresi (gün)</span><input type="number" min="0" inputmode="numeric" data-bind="meta.ibrazGun" value="${hesc(M.ibrazGun||'')}"></label>
+  </div></div>`;
+  h+=`<div class="card"><h2>Raporu düzenleyen(ler) <span class="muted" style="text-transform:none;letter-spacing:0">– kıdem sırasıyla, en kıdemli ilk</span></h2><div class="list">${M.mufettisler.map((m,i)=>`<div class="item"><div class="row">${fText(`meta.mufettisler.${i}.ad`,'Adı soyadı','')}${fSel(`meta.mufettisler.${i}.unvan`,'Unvanı',UNVANLAR)}<div class="row" style="flex:none"><button class="btn small" data-mv="meta.mufettisler|${i}|-1">↑</button><button class="btn small" data-mv="meta.mufettisler|${i}|1">↓</button><button class="btn small danger" data-rm="meta.mufettisler|${i}">✕</button></div></div></div>`).join('')}</div><button class="btn small" data-add="mufettis">+ Vergi Müfettişi ekle</button></div>`;
+  h+=`<div class="card"><h2>Görevlendirme yazıları</h2><div class="list">${M.gorevler.map((g,i)=>`<div class="item"><div class="row">${fText(`meta.gorevler.${i}.birim`,'Görevlendiren Daire Başkanlığı',M.daire||'')}${fDate(`meta.gorevler.${i}.tarih`,'Tarihi')}${fText(`meta.gorevler.${i}.sayi`,'Sayısı','')}<button class="btn small danger" data-rm="meta.gorevler|${i}">✕</button></div>${M.gorevler.length>1?fText(`meta.gorevler.${i}.konu`,'Konusu (birden fazla yazıda tabloya girer)',''):''}</div>`).join('')}</div><button class="btn small" data-add="gorev">+ Görev yazısı ekle</button>${M.gorevler.length>1?'<p class="muted">Birden fazla görev yazısı Giriş bölümünde tablo halinde gösterilir.</p>':''}</div>`;
+  h+=`<div class="card"><h2>Mükellef</h2><div class="grid">
+    ${fText('meta.mukellef.ad','Adı soyadı / unvanı','','full')}
+    ${fText('meta.mukellef.vkn','Vergi / T.C. kimlik no','')}${fText('meta.mukellef.vd','Vergi dairesi (tarha yetkili; yalnız adı)','Kozyatağı')}
+    ${fText('meta.mukellef.adres','Adresi','','full')}
+    ${fText('meta.mukellef.is','İşi (faaliyet konusu)','')}${fText('meta.mukellef.meslekKodu','Meslek kodu','')}${fText('meta.mukellef.tel','Telefonu','')}
+    ${fSel('meta.mukellef.faaliyet','Faaliyet durumu',['Faal','Gayri faal','Terk','Tasfiye','İflas','Ticaret sicilinden silinmiş'])}
+  </div></div>`;
+  if(/kurumlar/i.test(M.vergiTuru||''))h+=`<div class="card"><h2>Ortaklar <span class="muted" style="text-transform:none;letter-spacing:0">– büyüklüğe göre ilk beş</span></h2><div class="list">${M.ortaklar.map((o,i)=>`<div class="item"><div class="row">${fText(`meta.ortaklar.${i}.ad`,'Adı soyadı / unvanı','')}${fText(`meta.ortaklar.${i}.vkn`,'Vergi / T.C. kimlik no','')}${fText(`meta.ortaklar.${i}.oran`,'Hisse oranı (%)','')}<button class="btn small danger" data-rm="meta.ortaklar|${i}">✕</button></div></div>`).join('')}</div><button class="btn small" data-add="ortak">+ Ortak ekle</button></div>`;
+  h+=`<div class="card"><h2>Talepler</h2><div class="grid">${vir?fSel('meta.uzlasma','Tarhiyat öncesi uzlaşma talebi',['Var','Yok','Kapsam dışı'])+fSel('meta.rdk','Rapor Değerlendirme Komisyonunda dinlenme talebi',['Var','Yok']):''}${fSel('meta.ozelge','Mükellef özelge ibraz etti mi?',['Yok','Var'])}</div></div>`;
+  h+=`<div class="card"><h2>Word biçimi</h2><div class="grid">${fSel('ayar.font','Yazı tipi',[['tnr','Times New Roman 12 punto'],['arial','Arial 11 punto']])}${fSel('ayar.satir','Satır aralığı',[['1','1,0'],['1.15','1,15'],['1.5','1,5']])}</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">${fChk('ayar.kapak','Kapak sayfası ekle')}${fChk('ayar.ekDizini','Ek dizinini raporun sonuna ekle')}${fChk('ayar.italikTirnak','Tırnak içindeki alıntı ve ifadeleri otomatik italik yaz')}${fChk('ayar.sayiBicim','Tablolardaki tutarları 1.250.000,00 biçimine çevir')}
+    <label style="display:flex;gap:8px;align-items:center;cursor:pointer"><input type="checkbox" id="chkAuto" ${autoOn()?'checked':''}> Taslağı bu cihazda otomatik sakla <span class="muted">(kapalıyken rapor yalnızca uygulama açıkken bellekte durur)</span></label></div></div>`;
+  $('main').innerHTML=h;
+}
+function renderVeri(){
+  const V=R.veriler;
+  let h=`<div class="card"><h2>İnceleme verileri</h2><p class="muted">Kapakta tablo olarak yer alır ve "Sonuç taslağı oluştur" bu tutarlardan cümleleri yazar. Her dönem bir sütundur; tutarları 1250000 veya 1.250.000,00 biçiminde girebilirsiniz.</p>`;
+  if(!V.length)h+='<p>Henüz dönem eklenmedi.</p>';
+  else h+=`<div class="tbl-ed"><table><tr><td style="min-width:200px;padding:8px;font-weight:700">Dönem</td>${V.map((d,i)=>`<td><div class="row" style="gap:2px;flex-wrap:nowrap"><input type="text" data-bind="veriler.${i}.donem" value="${hesc(d.donem||'')}" placeholder="2022 / 2022-05" style="font-weight:700"><button class="btn small danger" data-rm="veriler|${i}" title="Dönemi sil">✕</button></div></td>`).join('')}</tr>`+
+    VERI_SATIRLARI.map(([k,l])=>`<tr><td style="padding:8px">${l}</td>${V.map((d,i)=>`<td><input type="text" inputmode="decimal" class="num" data-bind="veriler.${i}.${k}" value="${hesc(d[k]||'')}" style="text-align:right"></td>`).join('')}</tr>`).join('')+'</table></div>';
+  h+=`<div style="margin-top:10px"><button class="btn" data-add="donem">+ Dönem ekle</button></div></div>`;
+  $('main').innerHTML=h;
+}
+const BLK_LABEL={p:'Paragraf',quote:'Alıntı / ifade (italik)',list:'Madde listesi',table:'Tablo'};
+function renderBolum(){
+  if(!SEC||!findSection(R,SEC))SEC=R.sections[0]&&R.sections[0].id;
+  let tree='';walk(R.sections,(s,num,depth)=>{tree+=`<button data-sid="${s.id}" class="${s.id===SEC?'on':''}" style="padding-left:${8+(depth-1)*14}px"><span class="num">${numStr(num)}</span><span>${hesc(s.title||'(başlıksız)')}</span><span class="dot"></span></button>`;});
+  const S=findSection(R,SEC);let num=[],depth=1;walk(R.sections,(s,n,d)=>{if(s.id===SEC){num=n;depth=d;}});
+  let ed='';
+  if(S){
+    const hint=HINTS[S.hint]||'';
+    const special=S.hint==='giris'?'<button class="btn small" data-act="giris">Giriş taslağı oluştur</button>':(S.hint==='sonuc'||S.hint==='sonucVsr')?'<button class="btn small" data-act="sonuc">Sonuç taslağı oluştur</button>':S.hint==='usul'?'<button class="btn small" data-act="usul">Standart cümleyi yaz</button>':'';
+    ed+=`<div class="card" id="secEditor"><div class="row"><label class="f" style="flex:1"><span>Başlık</span><input type="text" id="secTitle" value="${hesc(S.title)}"></label></div>
+      <p class="muted" style="margin:6px 0 10px">Word'de: <b id="secPrev">${hesc(numStr(num)+' '+headingCase(S.title,depth))}</b> ${depth===1?'(bölüm başlığı: tamamı büyük harf)':depth===2?'(alt başlık: her kelimenin ilk harfi büyük)':'(alt başlık: yalnız ilk harf büyük)'} – kalın</p>
+      ${hint?`<div class="hint">${hesc(hint)}</div>`:''}<div id="secIssues"></div>
+      ${special?`<div class="addbar" style="margin-bottom:10px">${special}</div>`:''}
+      ${S.blocks.map((b,i)=>blockHtml(b,i,S.blocks.length)).join('')||'<p class="muted">Bu bölümde henüz içerik yok. Aşağıdan paragraf, alıntı, liste veya tablo ekleyin.</p>'}
+      <div class="addbar"><button class="btn small" data-addb="p">+ Paragraf</button><button class="btn small" data-addb="quote">+ Alıntı / ifade</button><button class="btn small" data-addb="list">+ Madde listesi</button><button class="btn small" data-addb="table">+ Tablo</button></div>
+      <hr style="border:0;border-top:1px solid var(--line);margin:14px 0">
+      <div class="addbar"><button class="btn small" data-sop="child">+ Alt başlık</button><button class="btn small" data-sop="sibling">+ Aynı düzeyde yeni bölüm</button><button class="btn small" data-sop="up">↑ Yukarı</button><button class="btn small" data-sop="down">↓ Aşağı</button><button class="btn small" data-sop="out">← Üst düzeye</button><button class="btn small" data-sop="in">→ Alt düzeye</button><button class="btn small danger" data-sop="del">Bölümü sil</button></div></div>`;
+  }
+  $('main').innerHTML=`<div class="sec-layout"><div class="tree" id="tree">${tree}<div style="padding:6px"><button class="btn small" data-sop="new" style="width:100%">+ Yeni ana bölüm</button></div></div><div>${ed}</div></div>`;
+}
+function blockHtml(b,i,n){
+  const ctl=`<button class="btn small" data-bop="up|${b.id}" ${i===0?'disabled':''}>↑</button><button class="btn small" data-bop="down|${b.id}" ${i===n-1?'disabled':''}>↓</button><button class="btn small danger" data-bop="del|${b.id}">✕</button>`;
+  if(b.type==='table'){
+    const rows=b.rows,nc=Math.max(1,...rows.map(r=>r.length));
+    return `<div class="blk" data-block="${b.id}"><div class="blk-h"><span class="tag">Tablo</span>${ctl}</div>
+      <label class="f"><span>Tablo başlığı (isteğe bağlı)</span><input type="text" data-tcap="${b.id}" value="${hesc(b.caption||'')}" placeholder="Tablo 1: …"></label>
+      <div class="tbl-ed" style="margin-top:8px"><table>${rows.map((r,ri)=>`<tr>${Array.from({length:nc},(_,ci)=>`<td><input type="text" class="${ri===0&&b.head!==false?'h':''}" data-cell="${b.id}|${ri}|${ci}" value="${hesc(r[ci]==null?'':r[ci])}"></td>`).join('')}</tr>`).join('')}</table></div>
+      <div class="addbar"><button class="btn small" data-top="addr|${b.id}">+ Satır</button><button class="btn small" data-top="addc|${b.id}">+ Sütun</button><button class="btn small" data-top="delr|${b.id}">− Son satır</button><button class="btn small" data-top="delc|${b.id}">− Son sütun</button><button class="btn small" data-top="paste|${b.id}">Excel'den yapıştır</button>
+      <label style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-thead="${b.id}" ${b.head!==false?'checked':''}> İlk satır başlık</label><label style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-ttot="${b.id}" ${b.total?'checked':''}> Son satır toplam (kalın)</label></div>
+      <p class="muted">Tablo Word'de ortalanır; tutarlar sağa, yazılar sola yaslanır. Excel'de seçip kopyaladığınız hücreleri herhangi bir hücreye yapıştırabilirsiniz.</p></div>`;
+  }
+  const tools=b.type==='list'?'':`<button class="btn small" data-ins="ref|${b.id}">+ Tutanak atfı</button>${b.type==='p'?`<button class="btn small" data-ins="b|${b.id}"><b>K</b></button><button class="btn small" data-ins="i|${b.id}"><i>İ</i></button><button class="btn small" data-ins="q|${b.id}">“ ”</button>`:''}`;
+  const note={p:'Her satır ayrı paragraf olur. Tırnak içindeki ifadeler otomatik italik yazılır. **kalın**, *italik*.',quote:'Mükellef ifadeleri ve alıntılar tırnak içinde ve italik yazılır; tırnağı siz eklemeseniz de eklenir.',list:'Her satır bir madde olur.'}[b.type];
+  return `<div class="blk" data-block="${b.id}"><div class="blk-h"><span class="tag">${BLK_LABEL[b.type]}</span>${tools}${ctl}</div><textarea data-btext="${b.id}" rows="${Math.min(14,Math.max(3,Math.ceil((b.text||'').length/80)+((b.text||'').match(/\n/g)||[]).length))}">${hesc(b.text||'')}</textarea><div class="muted" style="margin-top:4px">${note}</div></div>`;
+}
+function renderEkler(){
+  let h=`<div class="card"><h2>Ekler (ek dizini)</h2><p class="muted">Raporun sonuna "Ek No – Ek Adı – Sayfa Adedi" sütunlu ek dizini eklenir; sonunda toplam sayfa ve CD/DVD adedi gösterilir. Ek dizini sayfaları numaralandırılmaz.</p><div class="list">${R.ekler.map((e,i)=>`<div class="item"><div class="row"><div style="font-weight:700;padding-bottom:10px">Ek ${i+1}</div>${fText(`ekler.${i}.ad`,'Ek adı','Vergi İnceleme Tutanağı')}<label class="f" style="max-width:130px"><span>Sayfa adedi</span><input type="number" min="0" inputmode="numeric" data-bind="ekler.${i}.sayfa" value="${hesc(e.sayfa||'')}"></label><div class="row" style="flex:none"><button class="btn small" data-mv="ekler|${i}|-1">↑</button><button class="btn small" data-mv="ekler|${i}|1">↓</button><button class="btn small danger" data-rm="ekler|${i}">✕</button></div></div></div>`).join('')}</div>
+  <button class="btn small" data-add="ek">+ Ek ekle</button><div class="grid" style="margin-top:14px"><label class="f"><span>CD/DVD adedi</span><input type="number" min="0" data-bind="cd" value="${hesc(R.cd||'')}"></label></div></div>`;
+  $('main').innerHTML=h;
+}
+function renderKontrol(){
+  const e=ISS.filter(i=>i.lvl==='err'),w=ISS.filter(i=>i.lvl==='warn'),n=ISS.filter(i=>i.lvl==='info');
+  const fixable=ISS.filter(i=>i.fix).length;
+  let h=`<div class="card"><h2>Kontrol</h2><div class="summary">${e.length?`<span class="pill err">${e.length} hata</span>`:''}${w.length?`<span class="pill warn">${w.length} uyarı</span>`:''}${n.length?`<span class="pill info">${n.length} öneri</span>`:''}${!ISS.length?'<span class="pill ok">Sorun bulunamadı</span>':''}${fixable?`<button class="btn small" id="fixAll">Yazım hatalarının hepsini düzelt (${fixable})</button>`:''}</div>
+  <p class="muted">Kaynaklar: Raporlama Rehberi şekil ve yazım kuralları; Vergi İncelemelerinde Uyulacak Usul ve Esaslar Hakkında Yönetmelik; TDK İmla Kılavuzu; kapak bilgileri ile metin arasındaki tutarlılık. "Git" uyarının olduğu yere götürür.</p>`;
+  h+=ISS.map((i,k)=>`<div class="chk ${i.lvl}"><span class="ic">${i.lvl==='err'?'!':i.lvl==='warn'?'▲':'i'}</span><div><div>${hesc(i.msg)}</div><div class="src">${hesc(i.src)}</div></div><div class="acts">${i.fix?`<button class="btn small" data-fix="${k}">Düzelt</button>`:''}<button class="btn small" data-go="${k}">Git</button></div></div>`).join('');
+  $('main').innerHTML=h+'</div>';
+}
+function renderOnizleme(){$('main').innerHTML=`<div class="card"><h2>Önizleme</h2><p class="muted">Word çıktısının yaklaşık görünümü. Sayfa numaraları Word'de alt ortada "1/25" biçiminde yer alır; kapak ve ek dizini numaralandırılmaz.</p><div class="pv">${previewHtml(R)}</div></div>`;}
+
+/* ---------- işlemler ---------- */
+function blocksOf(id){let r=null;walk(R.sections,s=>{if(s.blocks.some(b=>b.id===id))r=s;});return r;}
+function parentList(id){let res=null;const rec=(arr,parent)=>{arr.forEach((s,i)=>{if(s.id===id)res={arr,i,parent};rec(s.children,s);});};rec(R.sections,null);return res;}
+function secOp(op){
+  const P=parentList(SEC);if(!P&&op!=='new')return;
+  if(op==='new'){const s=mkSection({title:'Yeni Bölüm'});R.sections.push(s);SEC=s.id;}
+  else if(op==='child'){const s=mkSection({title:'Yeni Alt Başlık'});P.arr[P.i].children.push(s);SEC=s.id;}
+  else if(op==='sibling'){const s=mkSection({title:'Yeni Bölüm'});P.arr.splice(P.i+1,0,s);SEC=s.id;}
+  else if(op==='up'&&P.i>0){[P.arr[P.i-1],P.arr[P.i]]=[P.arr[P.i],P.arr[P.i-1]];}
+  else if(op==='down'&&P.i<P.arr.length-1){[P.arr[P.i+1],P.arr[P.i]]=[P.arr[P.i],P.arr[P.i+1]];}
+  else if(op==='in'&&P.i>0){const s=P.arr.splice(P.i,1)[0];P.arr[P.i-1].children.push(s);}
+  else if(op==='out'&&P.parent){const s=P.arr.splice(P.i,1)[0];const G=parentList(P.parent.id);G.arr.splice(G.i+1,0,s);}
+  else if(op==='del'){const s=P.arr[P.i];if(!confirm(`"${s.title}" bölümü ve alt başlıkları silinsin mi?`))return;P.arr.splice(P.i,1);SEC=(P.arr[P.i]||P.arr[P.i-1]||P.parent||R.sections[0]||{}).id;}
+  changed();render();runCheck();
+}
+function insertAt(ta,before,after,ph){const s=ta.selectionStart,e=ta.selectionEnd,sel=ta.value.slice(s,e)||ph||'';ta.value=ta.value.slice(0,s)+before+sel+after+ta.value.slice(e);ta.focus();ta.selectionStart=s+before.length;ta.selectionEnd=s+before.length+sel.length;ta.dispatchEvent(new Event('input',{bubbles:true}));}
+function fillTable(b,r0,c0,text){
+  const lines=text.replace(/\r/g,'').replace(/\n$/,'').split('\n').map(l=>l.split('\t'));
+  for(let i=0;i<lines.length;i++){const r=r0+i;while(b.rows.length<=r)b.rows.push([]);for(let j=0;j<lines[i].length;j++){const c=c0+j;while(b.rows[r].length<=c)b.rows[r].push('');b.rows[r][c]=lines[i][j].trim();}}
+  const nc=Math.max(...b.rows.map(r=>r.length));b.rows.forEach(r=>{while(r.length<nc)r.push('');});
+}
+function safeName(s){return String(s||'').replace(/[çÇ]/g,'c').replace(/[ğĞ]/g,'g').replace(/[ıİ]/g,'i').replace(/[öÖ]/g,'o').replace(/[şŞ]/g,'s').replace(/[üÜ]/g,'u').replace(/[^A-Za-z0-9]+/g,'_').replace(/^_|_$/g,'').slice(0,40);}
+function download(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},2000);}
+const SHORT={vir:'VIR',virKabul:'VIR_Kabul',virIade:'VIR_Iade',vtr:'VTR',vtrTam:'VTR',vtrKismen:'VTR',vtrTaklit:'VTR',vtrMuht:'VTR',vsr:'VSR'};
+async function wordIndir(){
+  try{
+    const b=await buildDocx(R);const nm=[SHORT[R.type]||'GOR',safeName(R.meta.donem),safeName(R.meta.mukellef.ad)].filter(Boolean).join('_')+'.docx';
+    download(b,nm);const e=ISS.filter(i=>i.lvl==='err').length;toast(e?`Word indirildi. Kontrol listesinde ${e} hata var.`:'Word dosyası indirildi.');
+  }catch(err){toast('Word oluşturulamadı: '+(err&&err.message||err));}
+}
+/* ---------- olay bağlama ---------- */
+function bind(){
+  $('tabs').onclick=e=>{const b=e.target.closest('button[data-tab]');if(!b)return;TAB=b.dataset.tab;render();};
+  const main=$('main');
+  main.addEventListener('input',e=>{
+    const t=e.target;
+    if(t.dataset.bind){setP(t.dataset.bind,t.type==='checkbox'?t.checked:t.value);changed();return;}
+    if(t.dataset.btext){const b=findBlock(R,t.dataset.btext);b.text=t.value;changed();return;}
+    if(t.dataset.cell){const[id,r,c]=t.dataset.cell.split('|');const b=findBlock(R,id);b.rows[+r][+c]=t.value;changed();return;}
+    if(t.dataset.tcap){findBlock(R,t.dataset.tcap).caption=t.value;changed();return;}
+    if(t.id==='secTitle'){const S=findSection(R,SEC);S.title=t.value;let d=1,n=[];walk(R.sections,(s,nn,dd)=>{if(s.id===SEC){d=dd;n=nn;}});$('secPrev').textContent=numStr(n)+' '+headingCase(S.title,d);const tb=document.querySelector(`#tree [data-sid="${SEC}"] span:nth-child(2)`);if(tb)tb.textContent=S.title||'(başlıksız)';changed();}
+  });
+  main.addEventListener('change',e=>{
+    const t=e.target;
+    if(t.dataset.bind){setP(t.dataset.bind,t.type==='checkbox'?t.checked:t.value);changed();if(/^meta\.(vergiTuru)$|^meta\.gorevler|^ayar\./.test(t.dataset.bind)&&TAB==='bilgi')render();
+      if(t.classList.contains('num')){const n=parseNum(t.value);if(!isNaN(n)){t.value=fmtTL(n);setP(t.dataset.bind,t.value);}}return;}
+    if(t.id==='selType'){R.type=t.value;changed();render();runCheck();toast('Rapor türü değişti. Bölüm yapısını bu türe göre kurmak için "Bölümleri bu türe göre yeniden kur"a basın.');return;}
+    if(t.id==='chkAuto'){if(t.checked){store.set(AS_FLAG,'1');store.set(AS_KEY,JSON.stringify(R));toast('Taslak bu cihazda otomatik saklanacak.');}else{store.del(AS_FLAG);store.del(AS_KEY);toast('Otomatik saklama kapatıldı; cihazdaki kopya silindi.');}return;}
+    if(t.dataset.thead){findBlock(R,t.dataset.thead).head=t.checked;changed();render();return;}
+    if(t.dataset.ttot){findBlock(R,t.dataset.ttot).total=t.checked;changed();return;}
+  });
+  main.addEventListener('paste',e=>{
+    const t=e.target;if(!t.dataset||!t.dataset.cell)return;const txt=(e.clipboardData||window.clipboardData).getData('text');if(!/[\t\n]/.test(txt))return;
+    e.preventDefault();const[id,r,c]=t.dataset.cell.split('|');fillTable(findBlock(R,id),+r,+c,txt);changed();render();runCheck();toast('Tablo yapıştırıldı.');
+  });
+  main.addEventListener('click',e=>{
+    const t=e.target.closest('button');if(!t)return;const d=t.dataset;
+    if(d.fix!=null){const i=ISS[+d.fix];if(i&&i.fix&&applyFix(R,i.fix)){changed();render();runCheck();toast('Düzeltildi.');}return;}
+    if(d.go!=null){jump(ISS[+d.go].where);return;}
+    if(t.id==='fixAll'){let n=0;for(let k=0;k<5;k++){const list=checkReport(R).filter(i=>i.fix);if(!list.length)break;for(const i of list)if(applyFix(R,i.fix))n++;}changed();runCheck();render();toast(n+' düzeltme yapıldı.');return;}
+    if(t.id==='bRebuild'){if(!confirm('Bölümler seçili rapor türüne göre yeniden kurulacak; mevcut bölüm içerikleri silinecek. Devam edilsin mi?'))return;R.sections=TYPES[R.type].sec.map(mkSection);SEC=null;changed();runCheck();toast('Bölümler yeniden kuruldu.');return;}
+    if(d.add){const M=R.meta;({mufettis:()=>M.mufettisler.push({ad:'',unvan:'Vergi Müfettişi'}),gorev:()=>M.gorevler.push({birim:M.daire||'',tarih:'',sayi:'',konu:''}),ortak:()=>M.ortaklar.push({ad:'',vkn:'',oran:''}),donem:()=>R.veriler.push({donem:''}),ek:()=>R.ekler.push({ad:'',sayfa:''})})[d.add]();changed();render();runCheck();return;}
+    if(d.rm){const[p,i]=d.rm.split('|');const a=getP(p);a.splice(+i,1);if(p==='meta.mufettisler'&&!a.length)a.push({ad:'',unvan:'Vergi Müfettişi'});if(p==='meta.gorevler'&&!a.length)a.push({birim:'',tarih:'',sayi:'',konu:''});changed();render();runCheck();return;}
+    if(d.mv){const[p,i,dir]=d.mv.split('|');const a=getP(p),j=+i+ +dir;if(j<0||j>=a.length)return;[a[+i],a[j]]=[a[j],a[+i]];changed();render();runCheck();return;}
+    if(d.sid){SEC=d.sid;render();return;}
+    if(d.sop){secOp(d.sop);return;}
+    if(d.addb){const S=findSection(R,SEC);const b={id:uid(),type:d.addb,text:''};if(d.addb==='table'){b.rows=[['Açıklama','Tutar (TL)'],['','']];b.head=true;delete b.text;}S.blocks.push(b);changed();render();runCheck();setTimeout(()=>{const el=document.querySelector(`.blk[data-block="${b.id}"] textarea, .blk[data-block="${b.id}"] input[data-cell]`);if(el){el.focus();el.scrollIntoView({block:'center'});}},40);return;}
+    if(d.bop){const[op,id]=d.bop.split('|');const S=blocksOf(id);const i=S.blocks.findIndex(b=>b.id===id);
+      if(op==='del'){const b=S.blocks[i];const has=b.text?b.text.trim():b.rows&&b.rows.flat().some(c=>String(c).trim());if(has&&!confirm('Bu içerik silinsin mi?'))return;S.blocks.splice(i,1);}
+      if(op==='up'&&i>0)[S.blocks[i-1],S.blocks[i]]=[S.blocks[i],S.blocks[i-1]];
+      if(op==='down'&&i<S.blocks.length-1)[S.blocks[i+1],S.blocks[i]]=[S.blocks[i],S.blocks[i+1]];
+      changed();render();runCheck();return;}
+    if(d.top){const[op,id]=d.top.split('|');const b=findBlock(R,id);const nc=Math.max(1,...b.rows.map(r=>r.length));
+      if(op==='addr')b.rows.push(new Array(nc).fill(''));if(op==='addc')b.rows.forEach(r=>r.push(''));if(op==='delr'&&b.rows.length>1)b.rows.pop();if(op==='delc'&&nc>1)b.rows.forEach(r=>r.pop());
+      if(op==='paste'){const txt=prompt('Excel\'de hücreleri seçip kopyalayın, buraya yapıştırın (tablo baştan doldurulur):');if(!txt)return;b.rows=[];fillTable(b,0,0,txt);}
+      changed();render();runCheck();return;}
+    if(d.ins){const[op,id]=d.ins.split('|');const ta=document.querySelector(`textarea[data-btext="${id}"]`);if(!ta)return;
+      if(op==='ref'){const ek=prompt('Ek numarası:','1');if(ek==null)return;const md=prompt('Tutanak madde numarası (boş bırakılabilir):','');insertAt(ta,` (Ek: ${ek.trim()} Tutanak${md&&md.trim()?' Md. '+md.trim():''})`,'','');}
+      if(op==='b')insertAt(ta,'**','**','kalın metin');if(op==='i')insertAt(ta,'*','*','italik metin');if(op==='q')insertAt(ta,'“','”','ifade');return;}
+    if(d.act){const S=findSection(R,SEC);const has=S.blocks.some(b=>(b.text||'').trim()||(b.rows&&b.rows.flat().some(c=>String(c).trim())));
+      if(has&&!confirm('Bölümdeki mevcut içerik taslakla değiştirilsin mi?'))return;
+      S.blocks=d.act==='giris'?girisTaslak(R):d.act==='sonuc'?sonucTaslak(R):[{id:uid(),type:'p',text:'Usul yönünden eleştirilecek bir husus tespit edilmemiştir.'}];
+      changed();render();runCheck();toast('Taslak yazıldı; köşeli parantezli yerleri tamamlayın.');return;}
+  });
+  $('bWord').onclick=wordIndir;
+  $('bSave').onclick=()=>{download(new Blob([JSON.stringify(R,null,1)],{type:'application/json'}),`rapor_taslak_${safeName(R.meta.mukellef.ad)||'yeni'}_${new Date().toISOString().slice(0,10)}.json`);dirty=false;toast('Taslak dosyası indirildi. "Taslak aç" ile kaldığınız yerden devam edebilirsiniz.');};
+  $('bOpen').onclick=()=>$('fOpen').click();
+  $('fOpen').onchange=async e=>{const f=e.target.files[0];e.target.value='';if(!f)return;try{const o=JSON.parse(await f.text());if(!o||!Array.isArray(o.sections))throw new Error('Bu dosya bir rapor taslağı değil.');R=migrate(o);SEC=null;TAB='bilgi';dirty=false;if(autoOn())store.set(AS_KEY,JSON.stringify(R));render();runCheck();toast('Taslak açıldı.');}catch(err){toast('Taslak açılamadı: '+err.message);}};
+  $('bNew').onclick=()=>{$('typeList').innerHTML=Object.entries(TYPES).map(([k,t])=>`<button data-nt="${k}">${hesc(t.label)}</button>`).join('');$('dlgType').showModal();};
+  $('typeList').onclick=e=>{const b=e.target.closest('[data-nt]');if(!b)return;if(dirty&&!confirm('Kaydedilmemiş değişiklikler var. Yeni rapor başlatılsın mı?'))return;R=newReport(b.dataset.nt);SEC=null;TAB='bilgi';dirty=false;$('dlgType').close();if(autoOn())store.set(AS_KEY,JSON.stringify(R));render();runCheck();};
+  $('dlgCancel').onclick=()=>$('dlgType').close();
+  window.addEventListener('beforeunload',e=>{if(dirty&&!autoOn()){e.preventDefault();e.returnValue='';}});
+}
+if(typeof document!=='undefined')init();
+</script>
+<script>if('serviceWorker' in navigator){addEventListener('load',()=>{navigator.serviceWorker.register('sw.js').catch(()=>{});});}</script>
+</body>
+</html>
