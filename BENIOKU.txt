@@ -1,4 +1,4 @@
-RAPOR OLUŞTURUCU – TABLET UYGULAMASI (Sürüm 1.0)
+RAPOR OLUŞTURUCU – TABLET UYGULAMASI (Sürüm 1.2)
 
 1) GitHub'da yeni bir depo açın (ör. Rapor-Olusturucu), Public seçin.
 2) Bu klasördeki 8 dosyanın hepsini depoya yükleyin (Add file > Upload files).
